@@ -78,7 +78,6 @@
         const data = await get_data();
         const google_data = data[0];
         const servo_data_raw = data[1];
-        let spec_data = new Map();
 
         // Get a list of supported css names
         let servo_data = servo_data_raw.map(element => element["Name"]).filter(element => element !== undefined);
@@ -87,12 +86,9 @@
             !element.property_name.startsWith("webkit-") && !element.property_name.startsWith("alias-")
         ).map(element => {
             element.servo_supports = servo_data.includes(element.property_name);
-            if (spec_data.has(element.property_name))
-                element.specs = spec_data.get(element.property_name);
             return element;
         });
 
-        console.log(correlated_data);
         correlated_data.forEach(element => {
             list_element.append(generate_list_entry(element));
         });
