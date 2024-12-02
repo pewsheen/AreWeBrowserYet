@@ -30,21 +30,17 @@
         let googles_css_popularity_promise = fetch(googles_css_popularity_url)
             .then(response => response.json());
         let servo_css_properties_promise = fetch(servo_css_properties_url)
-            .then(response => response.text());
+            .then(response => parse_table_from_HTML(response.text()));
 
         const resolved_data = await Promise.allSettled([googles_css_popularity_promise, servo_css_properties_promise]);
 
         const googles_resolved_data = resolved_data[0].value;
         const servo_resolved_data = resolved_data[1].value;
 
-        console.log(googles_resolved_data);
-
-        var table = parseTableFromHTML(servo_resolved_data);
-        console.log(table);
-        return [googles_resolved_data, table];
+        return [googles_resolved_data, servo_resolved_data];
     }
 
-    function parseTableFromHTML(htmlString) {
+    function parse_table_from_HTML(htmlString) {
         // Create a DOM parser to parse the HTML string
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, 'text/html');
@@ -86,8 +82,6 @@
 
         // Get a list of supported css names
         let servo_data = servo_data_raw.map(element => element["Name"]).filter(element => element !== undefined);
-
-        console.log(servo_data);
 
         let correlated_data = google_data.filter(element =>
             !element.property_name.startsWith("webkit-") && !element.property_name.startsWith("alias-")
