@@ -10,13 +10,13 @@
     <p>Supported CSS-Properties that are loaded on more than 5% of webpages are:
     <div id="stat"></div>
     </p>
-    <ul id="list">
-        <li>
-            <span class="property">Property</span>
-            <span class="percent_value">Percentage</span>
-            <span class="servo_support">Supported by Servo</span>
-        </li>
-    </ul>
+    <table id="list">
+        <tr>
+            <th class="property">Property</th>
+            <th class="percent_value">Percentage</th>
+            <th class="servo_support">Supported by Servo</th>
+        </tr>
+    </table>
 </body>
 
 <script>
@@ -100,19 +100,23 @@
     }
 
     function generate_list_entry(data) {
-        let entry = document.createElement("li");
-        
-        let property = document.createElement("span");
+        let entry = document.createElement("tr");
+
+        let property = document.createElement("td");
         property.textContent = data.property_name;
         property.classList.add("property");
         entry.append(property);
-        
-        let bar_value = document.createElement("span");
+
+        let bar_value = document.createElement("td");
         bar_value.classList.add("percent_value");
         bar_value.innerText = (data.day_percentage * 100).toFixed(2) + "%";
         entry.append(bar_value);
-        if (data.servo_supports)
-            entry.append("|servo supports");
+        if (data.servo_supports) {
+            let servo_support = document.createElement("td");
+            servo_support.classList.add("servo_support");
+            servo_support.innerText = "Servo supports";
+            entry.append(servo_support);
+        }
 
         return entry;
     }
