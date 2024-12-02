@@ -30,12 +30,12 @@
         let googles_css_popularity_promise = fetch(googles_css_popularity_url)
             .then(response => response.json());
         let servo_css_properties_promise = fetch(servo_css_properties_url)
-            .then(response => parse_table_from_HTML(response.text()));
+            .then(response => response.text());
 
         const resolved_data = await Promise.allSettled([googles_css_popularity_promise, servo_css_properties_promise]);
 
         const googles_resolved_data = resolved_data[0].value;
-        const servo_resolved_data = resolved_data[1].value;
+        const servo_resolved_data = parse_table_from_HTML(resolved_data[1].value);
 
         return [googles_resolved_data, servo_resolved_data];
     }
