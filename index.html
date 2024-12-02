@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Are We Browser Yet</title>
+</head>
+
+<body>
+    <p>Supported CSS-Properties that are loaded on more than 5% of webpages are:
+    <div id="stat"></div>
+    </p>
+    <ul id="list">
+        <li>
+            <span class="property">Property</span>
+            <span class="percent_value">Percentage</span>
+            <span class="percent_value">Supported by Servo</span>
+        </li>
+    </ul>
+</body>
+
+<script>
+    const googles_css_popularity_url = "https://chromestatus.com/data/csspopularity";
+    const servo_css_properties_url = "https://doc.servo.org/stylo/css-properties.html";
+
+    list_element = document.getElementById("list");
+    stat_element = document.getElementById("stat");
+
+    async function get_data() {
+        let googles_css_popularity_promise = fetch(googles_css_popularity_url)
+            .then(response => response.json());
+        let servo_css_properties_promise = fetch(servo_css_properties_url)
+            .then(response => response.text());
+
+        const resolved_data = await Promise.allSettled([googles_css_popularity_promise, servo_css_properties_promise]);
+
+        const googles_resolved_data = resolved_data[0].value;
+        const servo_resolved_data = resolved_data[1].value;
+
+        console.log(googles_resolved_data);
+
+        var table = parseTableFromHTML(servo_resolved_data);
+        console.log(table);
+        return [googles_resolved_data, table];
+    }
+
+    function parseTableFromHTML(htmlString) {
+        // Create a DOM parser to parse the HTML string
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlString, 'text/html');
+
+        // Select the first <table> in the parsed HTML
+        const table = doc.querySelector('table');
+        if (!table) {
+            return { error: 'No table found in the provided HTML string' };
+        }
+
+        // Get all rows of the table
+        const rows = Array.from(table.querySelectorAll('tr'));
+
+        if (rows.length === 0) {
+            return { error: 'No rows found in the table' };
+        }
+
+        // Assume the first row contains headers
+        const headers = Array.from(rows[0].querySelectorAll('td, th')).map(header => header.textContent.trim());
+
+        // Process remaining rows as data
+        const data = rows.slice(1).map(row => {
+            const cells = Array.from(row.querySelectorAll('td'));
+            const rowData = {};
+            cells.forEach((cell, index) => {
+                rowData[headers[index]] = cell.textContent.trim();
+            });
+            return rowData;
+        });
+
+        return data;
+    }
+
+    async function build_page() {
+        const data = await get_data();
+        const google_data = data[0];
+        const servo_data_raw = data[1];
+        let spec_data = new Map();
+
+        // Get a list of supported css names
+        let servo_data = servo_data_raw.map(element => element["Name"]).filter(element => element !== undefined);
+
+        console.log(servo_data);
+
+        let correlated_data = google_data.filter(element =>
+            !element.property_name.startsWith("webkit-") && !element.property_name.startsWith("alias-")
+        ).map(element => {
+            element.servo_supports = servo_data.includes(element.property_name);
+            if (spec_data.has(element.property_name))
+                element.specs = spec_data.get(element.property_name);
+            return element;
+        });
+
+        console.log(correlated_data);
+        correlated_data.forEach(element => {
+            list_element.append(generate_list_entry(element));
+        });
+
+        number_of_properties_over_five_percent = correlated_data.filter(data => data.day_percentage >= 0.05);
+        number_of_supported_properties_over_five_percent = number_of_properties_over_five_percent.filter(data => data.servo_supports).length;
+
+        stat_element.innerText = number_of_supported_properties_over_five_percent + " / " + number_of_properties_over_five_percent.length + " (" + correlated_data.length + ")";
+    }
+
+    function generate_list_entry(data) {
+        let entry = document.createElement("li");
+        
+        let property = document.createElement("span");
+        property.textContent = data.property_name;
+        property.classList.add("property");
+        entry.append(property);
+        
+        let bar_value = document.createElement("span");
+        bar_value.classList.add("percent_value");
+        bar_value.innerText = (data.day_percentage * 100).toFixed(2) + "%";
+        entry.append(bar_value);
+        if (data.servo_supports)
+            entry.append("|servo supports");
+
+        return entry;
+    }
+
+    build_page();
+
+</script>
+
+</html>
