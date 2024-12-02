@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Are We Browser Yet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <p>Supported CSS-Properties that are loaded on more than 5% of webpages are:
-    <div id="stat"></div>
-    <div>Servo supported features/top used features (all features)</div>
-    </p>
-    <table id="list">
-        <tr>
-            <th class="property">Property</th>
-            <th class="percent_value">Percentage</th>
-            <th class="servo_support">Supported by Servo</th>
-        </tr>
-    </table>
+    <div class="full-container">
+        <p>Supported CSS-Properties that are loaded on more than 5% of webpages are:
+        <div id="stat"></div>
+        <div>Servo supported features/top used features (all features)</div>
+        </p>
+        <table id="list">
+            <tr>
+                <th class="property">Property</th>
+                <th class="percent_value">Percentage</th>
+                <th class="servo_support">Supported by Servo</th>
+            </tr>
+        </table>
+    </div>
 </body>
 
 <script>
@@ -50,8 +53,7 @@
         // currently there are two tables in servo_css_properties page
         const tables = doc.querySelectorAll('table');
         const data = [];
-        for (const table of tables)
-        {
+        for (const table of tables) {
             // Get all rows of the table
             const rows = Array.from(table.querySelectorAll('tr'));
 
