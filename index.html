@@ -136,12 +136,12 @@
         bar_value.classList.add("percent_value");
         bar_value.innerText = (data.day_percentage * 100).toFixed(2) + "%";
         entry.append(bar_value);
-        if (data.servo_supports) {
-            let servo_support = document.createElement("td");
-            servo_support.classList.add("servo_support");
-            servo_support.innerText = "Yes";
-            entry.append(servo_support);
-        }
+
+        let servo_support = document.createElement("td");
+        servo_support.classList.add("servo_support");
+        servo_support.innerText = "Yes";
+        entry.append(servo_support);
+        
         if (data.hasOwnProperty("specs")) {
             let spec_links = document.createElement("td");
             spec_links.classList.add("spec-links");
