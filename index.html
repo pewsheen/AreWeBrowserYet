@@ -47,14 +47,11 @@
         const doc = parser.parseFromString(htmlString, 'text/html');
 
         // Select all <table> in the parsed HTML
+        // currently there are two tables in servo_css_properties page
         const tables = doc.querySelectorAll('table');
         const data = [];
         for (const table of tables)
         {
-            if (!table) {
-                return { error: 'No table found in the provided HTML string' };
-            }
-
             // Get all rows of the table
             const rows = Array.from(table.querySelectorAll('tr'));
 
