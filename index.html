@@ -37,7 +37,7 @@
 
         const googles_resolved_data = resolved_data[0].value;
         const servo_resolved_data = parse_table_from_HTML(resolved_data[1].value);
-
+        console.log(servo_resolved_data);
         return [googles_resolved_data, servo_resolved_data];
     }
 
@@ -46,31 +46,36 @@
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, 'text/html');
 
-        // Select the first <table> in the parsed HTML
-        const table = doc.querySelector('table');
-        if (!table) {
-            return { error: 'No table found in the provided HTML string' };
+        // Select all <table> in the parsed HTML
+        const tables = doc.querySelectorAll('table');
+        const data = [];
+        for (const table of tables)
+        {
+            if (!table) {
+                return { error: 'No table found in the provided HTML string' };
+            }
+
+            // Get all rows of the table
+            const rows = Array.from(table.querySelectorAll('tr'));
+
+            if (rows.length === 0) {
+                return { error: 'No rows found in the table' };
+            }
+
+            // Assume the first row contains headers
+            const headers = Array.from(rows[0].querySelectorAll('td, th')).map(header => header.textContent.trim());
+
+            // Process remaining rows as data and add to the data array
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                const rowData = Array.from(row.querySelectorAll('td, th')).map(cell => cell.textContent.trim());
+                const rowObject = {};
+                for (let j = 0; j < headers.length; j++) {
+                    rowObject[headers[j]] = rowData[j];
+                }
+                data.push(rowObject);
+            }
         }
-
-        // Get all rows of the table
-        const rows = Array.from(table.querySelectorAll('tr'));
-
-        if (rows.length === 0) {
-            return { error: 'No rows found in the table' };
-        }
-
-        // Assume the first row contains headers
-        const headers = Array.from(rows[0].querySelectorAll('td, th')).map(header => header.textContent.trim());
-
-        // Process remaining rows as data
-        const data = rows.slice(1).map(row => {
-            const cells = Array.from(row.querySelectorAll('td'));
-            const rowData = {};
-            cells.forEach((cell, index) => {
-                rowData[headers[index]] = cell.textContent.trim();
-            });
-            return rowData;
-        });
 
         return data;
     }
