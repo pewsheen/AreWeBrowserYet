@@ -10,7 +10,7 @@ This simple page just loads and parse through the data and list out the supporte
 
 ## Future Work
 
-- [ ] Setup a GitHub page
+- [x] Setup a GitHub page
 - [ ] Add in supported HTML/JS API tracking
 - [ ] Improve frontend presentation
 - [ ] Add in performance tracking after https://github.com/servo/servo/pull/33261 merges
