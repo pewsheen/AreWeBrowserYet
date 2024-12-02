@@ -26,6 +26,9 @@
 <script>
     const googles_css_popularity_url = "https://chromestatus.com/data/csspopularity";
     const servo_css_properties_url = "https://doc.servo.org/stylo/css-properties.html";
+    const w3c_css_properties_url = "all-properties.en.json";
+    // const google_feature_popularity_url = "https://chromestatus.com/data/featurepopularity";
+    // const servo_feature_url = "https://doc.servo.org/apis.html";
 
     list_element = document.getElementById("list");
     stat_element = document.getElementById("stat");
@@ -35,13 +38,16 @@
             .then(response => response.json());
         let servo_css_properties_promise = fetch(servo_css_properties_url)
             .then(response => response.text());
+        let w3c_css_properties_promise = fetch(w3c_css_properties_url)
+            .then(response => response.json());
 
-        const resolved_data = await Promise.allSettled([googles_css_popularity_promise, servo_css_properties_promise]);
+        const resolved_data = await Promise.allSettled([googles_css_popularity_promise, servo_css_properties_promise, w3c_css_properties_promise]);
 
         const googles_resolved_data = resolved_data[0].value;
         const servo_resolved_data = parse_table_from_HTML(resolved_data[1].value);
+        const w3c_resolved_data = resolved_data[2].value;
 
-        return [googles_resolved_data, servo_resolved_data];
+        return [googles_resolved_data, servo_resolved_data, w3c_resolved_data];
     }
 
     function parse_table_from_HTML(htmlString) {
@@ -83,7 +89,18 @@
         const data = await get_data();
         const google_data = data[0];
         const servo_data_raw = data[1];
+        const w3c_data_object = data[2];
+        let spec_data = new Map();
 
+        for (var i = 0; i < w3c_data_object.length; i++) {
+            const entry = w3c_data_object[i];
+            const property_name = entry.property;
+            if (!spec_data.has(property_name)) {
+                spec_data.set(property_name, [entry]);
+            } else {
+                spec_data.get(property_name).push(entry);
+            }
+        }
         // Get a list of supported css names
         let servo_data = servo_data_raw.map(element => element["Name"]).filter(element => element !== undefined);
 
@@ -91,6 +108,8 @@
             !element.property_name.startsWith("webkit-") && !element.property_name.startsWith("alias-")
         ).map(element => {
             element.servo_supports = servo_data.includes(element.property_name);
+            if (spec_data.has(element.property_name))
+                element.specs = spec_data.get(element.property_name);
             return element;
         });
 
@@ -121,6 +140,24 @@
             servo_support.classList.add("servo_support");
             servo_support.innerText = "Yes";
             entry.append(servo_support);
+        }
+        if (data.hasOwnProperty("specs")) {
+            let spec_links = document.createElement("td");
+            spec_links.classList.add("spec-links");
+            for (var i = 0; i < data.specs.length; i++) {
+                const spec = data.specs[i];
+                let link = document.createElement("a");
+                link.href = spec.url;
+                link.innerText = spec.status;
+                link.title = spec.title;
+                link.target = "_blank";
+
+                let li = document.createElement("li");
+                li.classList.add("spec-" + spec.status);
+                li.append(link);
+                spec_links.append(li);
+            }
+            entry.append(spec_links);
         }
 
         return entry;
