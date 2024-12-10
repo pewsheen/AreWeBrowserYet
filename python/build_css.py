@@ -23,7 +23,7 @@ def generate_line(data):
 def generate_spec_links(data):
     if 'specs' not in data:
         return 'N/A'
-    return ', '.join([f"[{spec['title']}]({spec['url']})" for spec in data['specs']])
+    return ', '.join([f"[{spec['status']}]({spec['url']})" for spec in data['specs']])
 
 def main():
     w3_css_properties = './static/w3-all-properties.json'
