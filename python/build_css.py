@@ -57,17 +57,7 @@ def main():
 
     print(spec_data)
 
-    # translated the js function to python
-        # let servo_data = servo_data_raw.map(element => element["Name"]).filter(element => element !== undefined);
-
-        # let correlated_data = google_data.filter(element =>
-        #     !element.property_name.startsWith("webkit-") && !element.property_name.startsWith("alias-")
-        # ).map(element => {
-        #     element.servo_supports = servo_data.includes(element.property_name);
-        #     if (spec_data.has(element.property_name))
-        #         element.specs = spec_data.get(element.property_name);
-        #     return element;
-        # });
+    
     # We'll create a list of dictionaries where each dictionary represents a CSS property.
     # We'll also check if the property is supported by Servo and if it's in the W3C spec.
     correlated_data = []
@@ -80,8 +70,17 @@ def main():
             entry['specs'] = spec_data[property_name]
         correlated_data.append(entry)
 
-    print(correlated_data)
 
+    # translated the js function to python
+    # number_of_properties_over_five_percent = correlated_data.filter(data => data.day_percentage >= 0.05);
+    # number_of_supported_properties_over_five_percent = number_of_properties_over_five_percent.filter(data => data.servo_supports).length;
+
+    # stat_element = number_of_supported_properties_over_five_percent + " / " + number_of_properties_over_five_percent.length + " (" + correlated_data.length + ")";
+    # We'll filter out the properties that have a usage of over 5%.
+    number_of_properties_over_five_percent = [data for data in correlated_data if data['day_percentage'] >= 0.05]
+    # We'll filter out the properties that are supported by Servo.
+    number_of_supported_properties_over_five_percent = [data for data in number_of_properties_over_five_percent if data['servo_supports']]
+    stat_element = f"{len(number_of_supported_properties_over_five_percent)} / {len(number_of_properties_over_five_percent)} ({len(correlated_data)})"
 
 
     # We'll write down the servo_properties list into a markdown table
@@ -91,6 +90,7 @@ insert_anchor_links = "left"
 title = "Servo CSS Coverage"
 +++
 """)
+        file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5%.\n\n")
         file.write('Property | Percentage | Supported by Servo | Relevant Spec\n')
         file.write('--- | --- | --- | ---\n')
         for data in correlated_data:
