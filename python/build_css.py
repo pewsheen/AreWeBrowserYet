@@ -20,7 +20,7 @@ def read_json_file(file_path):
 
 def main():
     # Define file paths
-    base_path = './assets'
+    base_path = './static'
     files = [
         'all-properties.en.json',
         'servo-css-properties.json',
