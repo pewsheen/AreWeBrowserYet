@@ -1,0 +1,37 @@
+name: Download CSS properties and deploy pages
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Re-deploy monthly just in case all-properties.en.json changes...
+    - cron: '5 8 * * 6'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  setup-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Download CSS properties JSON From W3
+        run: |
+          wget https://www.w3.org/Style/CSS/all-properties.en.json -O ./assets/all-properties.en.json
+
+      - name: Download Servo supported CSS properties
+        run: |
+          wget https://doc.servo.org/stylo/css-properties.json -O ./assets/servo-css-properties.json
+
+      - name: Download Google supported CSS properties
+        run: |
+          wget https://chromestatus.com/data/csspopularity -O ./assets/google-css-popularity.json
+
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' 
+      - name:
+        run: |
+          python ./python/build_css.py
