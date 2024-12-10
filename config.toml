@@ -47,7 +47,7 @@ index_format = "fuse_json"
 #
 # Sets theme and browser theme color.
 # See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
-accent_color = "#41bb64"
+accent_color = "#009d9a"
 # Ditto but for the dark theme.
 # If not set regular variant will be used.
 accent_color_dark = "#009d9a"
