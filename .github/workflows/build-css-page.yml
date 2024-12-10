@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    # Re-deploy monthly just in case all-properties.en.json changes...
+    # Re-deploy weekly to automatically track changes...
     - cron: '5 8 * * 6'
   workflow_dispatch:
 permissions:
