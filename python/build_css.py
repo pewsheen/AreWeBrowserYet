@@ -1,5 +1,4 @@
 import json
-import os
 
 def read_json_file(file_path):
     """
@@ -19,26 +18,29 @@ def read_json_file(file_path):
         return None
 
 def main():
-    # Define file paths
-    base_path = './static'
-    files = [
-        'all-properties.en.json',
-        'servo-css-properties.json',
-        'google-css-popularity.json'
-    ]
+    w3_css_properties = './static/w3-all-properties.json'
+    google_css_popularity = './static/google-css-popularity.json'
+    servo_css_properties = './static/servo-css-properties.json'
 
-    # Load JSON files
-    json_data = {}
-    for file_name in files:
-        file_path = os.path.join(base_path, file_name)
-        json_data[file_name] = read_json_file(file_path)
+    w3_properties = read_json_file(w3_css_properties)
+    google_popularity = read_json_file(google_css_popularity)
+    servo_properties = read_json_file(servo_css_properties)
+    
+    # Servo's supported properties will be listed in two categories: shorthand and longhand.
+    # We'll simply extract both into one list.
+    servo_properties = servo_properties['shorthands'] + servo_properties['longhands']
 
-    # Check loaded data
-    for file_name, content in json_data.items():
-        if content is not None:
-            print(f"Loaded data from {file_name}: {len(content)} entries")
-        else:
-            print(f"Failed to load data from {file_name}")
+    print("test")
+
+    print(servo_properties)
+
+    # We'll write down the servo_properties into a markdown table
+    with open('./content/servo-properties.md', 'w', encoding='utf-8') as file:
+        file.write('| Property | Description |')
+        file.write('\n| --- | --- |')
+        for property in servo_properties:
+            file.write(f'\n| {property["name"]} | {property["description"]} |')
+
 
 if __name__ == '__main__':
     main()
