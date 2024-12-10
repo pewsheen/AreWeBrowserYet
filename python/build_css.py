@@ -82,12 +82,12 @@ def main():
 
 
     # We'll write down the servo_properties list into a markdown table
-    with open('./content/servo-properties.md', 'w', encoding='utf-8') as file:
-        file.write("""+++
-insert_anchor_links = "left"
-title = "Servo CSS Coverage"
-+++
-""")
+    with open('./content/metrics/css.md', 'a', encoding='utf-8') as file:
+#         file.write("""+++
+# insert_anchor_links = "left"
+# title = "Servo CSS Coverage"
+# +++
+# """)
         file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5%.\n\n")
         file.write('Property | Percentage | Supported by Servo | Relevant Spec\n')
         file.write('--- | --- | --- | ---\n')

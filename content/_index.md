@@ -17,8 +17,3 @@ jgs~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~
 Are We Browser Yet is a simple site that tracks various aspect of the development of the [Servo browser engine](https://github.com/servo/servo).
 
 This site will be automatically rebuilt every week.
-
-
-### Custom Styles
-
-Removing this will break the site atm so leaving this as is for now.

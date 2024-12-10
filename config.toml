@@ -158,7 +158,8 @@ links = [
 		# { url = "@/demo/index.md", name = "Demo" },
 		# { url = "@/mods/index.md", name = "Mods" }
 	# ] },
-	{ url = "@/blog/_index.md", name = "Blog" },
+	# { url = "@/blog/_index.md", name = "Blog" },
+	{ url = "@/metrics/css.md", name = "CSS Coverage" },
 	# { url = "https://daudix.one/coffee/", name = "Coffee" }
 ]
 
