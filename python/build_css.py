@@ -19,8 +19,8 @@ def read_json_file(file_path):
 
 def generate_line(data):
     line = f"{data['property_name']}"
-    # display the percentage of usage of the property, with a % sign
-    line += f" | {data['day_percentage'] * 100}"
+    # display the percentage of usage of the property, with a % sign, formatted with only 2 decimal places
+    line += f" | {data['day_percentage']*100:.2f}%"
     # display if the property is supported by Servo
     line += f" | " + ("Yes" if data['servo_supports'] else "")
     # display the relevant specs for the property
