@@ -18,15 +18,15 @@ jobs:
 
       - name: Download CSS properties JSON From W3
         run: |
-          wget https://www.w3.org/Style/CSS/all-properties.en.json -O ./assets/all-properties.en.json
+          wget https://www.w3.org/Style/CSS/all-properties.en.json -O ./static/w3-all-properties.json
 
       - name: Download Servo supported CSS properties
         run: |
-          wget https://doc.servo.org/stylo/css-properties.json -O ./assets/servo-css-properties.json
+          wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
 
       - name: Download Google supported CSS properties
         run: |
-          wget https://chromestatus.com/data/csspopularity -O ./assets/google-css-popularity.json
+          wget https://chromestatus.com/data/csspopularity -O ./static/google-css-popularity.json
 
       
       - uses: actions/setup-python@v5
