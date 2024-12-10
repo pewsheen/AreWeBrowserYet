@@ -39,6 +39,11 @@ def main():
 
     # We'll write down the servo_properties list into a markdown table
     with open('./content/servo-properties.md', 'w', encoding='utf-8') as file:
+        file.write("""+++
+insert_anchor_links = "left"
+title = "Servo CSS Coverage"
++++
+""")
         file.write('Property | Description\n')
         file.write('--- | ---\n')
         for property_name in servo_properties:
