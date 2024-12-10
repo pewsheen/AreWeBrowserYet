@@ -70,12 +70,6 @@ def main():
             entry['specs'] = spec_data[property_name]
         correlated_data.append(entry)
 
-
-    # translated the js function to python
-    # number_of_properties_over_five_percent = correlated_data.filter(data => data.day_percentage >= 0.05);
-    # number_of_supported_properties_over_five_percent = number_of_properties_over_five_percent.filter(data => data.servo_supports).length;
-
-    # stat_element = number_of_supported_properties_over_five_percent + " / " + number_of_properties_over_five_percent.length + " (" + correlated_data.length + ")";
     # We'll filter out the properties that have a usage of over 5%.
     number_of_properties_over_five_percent = [data for data in correlated_data if data['day_percentage'] >= 0.05]
     # We'll filter out the properties that are supported by Servo.
