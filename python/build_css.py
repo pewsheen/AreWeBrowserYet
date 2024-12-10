@@ -22,7 +22,7 @@ def generate_line(data):
     # display the percentage of usage of the property, with a % sign, formatted with only 2 decimal places
     line += f" | {data['day_percentage']*100:.2f}%"
     # display if the property is supported by Servo
-    line += f" | " + ("Yes" if data['servo_supports'] else "")
+    line += f" | " + ("✅" if data['servo_supports'] else "❌")
     # display the relevant specs for the property
     line += f" | {generate_spec_links(data)}\n"
     return line
