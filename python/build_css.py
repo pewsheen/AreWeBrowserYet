@@ -17,6 +17,14 @@ def read_json_file(file_path):
         print(f"Error: Failed to decode JSON from file at {file_path}")
         return None
 
+def generate_line(data):
+    return f"{data['property_name']} | {data['day_percentage'] * 100} | {data['servo_supports']} | {generate_spec_links(data)}\n"
+
+def generate_spec_links(data):
+    if 'specs' not in data:
+        return 'N/A'
+    return ', '.join([f"[{spec['title']}]({spec['url']})" for spec in data['specs']])
+
 def main():
     w3_css_properties = './static/w3-all-properties.json'
     google_css_popularity = './static/google-css-popularity.json'
@@ -37,6 +45,45 @@ def main():
     for key in servo_properties_raw['longhands'].keys():
         servo_properties.append(key)
 
+
+    # We'll create a dictionary where the key is the property name and the value is a list of entries.
+    spec_data = {}
+    for entry in w3_properties:
+        property_name = entry['property']
+        if property_name not in spec_data:
+            spec_data[property_name] = [entry]
+        else:
+            spec_data[property_name].append(entry)
+
+    print(spec_data)
+
+    # translated the js function to python
+        # let servo_data = servo_data_raw.map(element => element["Name"]).filter(element => element !== undefined);
+
+        # let correlated_data = google_data.filter(element =>
+        #     !element.property_name.startsWith("webkit-") && !element.property_name.startsWith("alias-")
+        # ).map(element => {
+        #     element.servo_supports = servo_data.includes(element.property_name);
+        #     if (spec_data.has(element.property_name))
+        #         element.specs = spec_data.get(element.property_name);
+        #     return element;
+        # });
+    # We'll create a list of dictionaries where each dictionary represents a CSS property.
+    # We'll also check if the property is supported by Servo and if it's in the W3C spec.
+    correlated_data = []
+    for entry in google_popularity:
+        property_name = entry['property_name']
+        if property_name.startswith('webkit-') or property_name.startswith('alias-'):
+            continue
+        entry['servo_supports'] = property_name in servo_properties
+        if property_name in spec_data:
+            entry['specs'] = spec_data[property_name]
+        correlated_data.append(entry)
+
+    print(correlated_data)
+
+
+
     # We'll write down the servo_properties list into a markdown table
     with open('./content/servo-properties.md', 'w', encoding='utf-8') as file:
         file.write("""+++
@@ -44,10 +91,10 @@ insert_anchor_links = "left"
 title = "Servo CSS Coverage"
 +++
 """)
-        file.write('Property | Description\n')
-        file.write('--- | ---\n')
-        for property_name in servo_properties:
-            file.write(f'{property_name} | \n')
+        file.write('Property | Percentage | Supported by Servo | Relevant Spec\n')
+        file.write('--- | --- | --- | ---\n')
+        for data in correlated_data:
+            file.write(generate_line(data))
 
 
 
