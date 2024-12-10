@@ -18,7 +18,14 @@ def read_json_file(file_path):
         return None
 
 def generate_line(data):
-    return f"{data['property_name']} | {data['day_percentage'] * 100} | {data['servo_supports']} | {generate_spec_links(data)}\n"
+    line = f"{data['property_name']}"
+    # display the percentage of usage of the property, with a % sign
+    line += f" | {data['day_percentage'] * 100}"
+    # display if the property is supported by Servo
+    line += f" | " + ("Yes" if data['servo_supports'] else "")
+    # display the relevant specs for the property
+    line += f" | {generate_spec_links(data)}\n"
+    return line
 
 def generate_spec_links(data):
     if 'specs' not in data:
@@ -55,9 +62,6 @@ def main():
         else:
             spec_data[property_name].append(entry)
 
-    print(spec_data)
-
-    
     # We'll create a list of dictionaries where each dictionary represents a CSS property.
     # We'll also check if the property is supported by Servo and if it's in the W3C spec.
     correlated_data = []
