@@ -78,7 +78,7 @@ def main():
     number_of_properties_over_five_percent = [data for data in correlated_data if data['day_percentage'] >= 0.05]
     # We'll filter out the properties that are supported by Servo.
     number_of_supported_properties_over_five_percent = [data for data in number_of_properties_over_five_percent if data['servo_supports']]
-    stat_element = f"{len(number_of_supported_properties_over_five_percent)} / {len(number_of_properties_over_five_percent)} ({len(correlated_data)})"
+    stat_element = f"{len(number_of_supported_properties_over_five_percent)} / {len(number_of_properties_over_five_percent)}"
 
 
     # We'll write down the servo_properties list into a markdown table
@@ -88,7 +88,7 @@ def main():
 # title = "Servo CSS Coverage"
 # +++
 # """)
-        file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5%.\n\n")
+        file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5%. (while the total css property count is {len(correlated_data)})\n\n")
         file.write('Property | Percentage | Supported by Servo | Relevant Spec\n')
         file.write('--- | --- | --- | ---\n')
         for data in correlated_data:
