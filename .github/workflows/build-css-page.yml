@@ -2,7 +2,7 @@ name: Download CSS properties and deploy pages
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     # Re-deploy monthly just in case all-properties.en.json changes...
     - cron: '5 8 * * 6'
