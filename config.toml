@@ -1,5 +1,5 @@
 title = "AreWeBrowserYet"
-base_url = "https://blog.chosenconcept.dev/AreWeBrowserYet/"
+base_url = "https://arewebrowseryet.com/"
 description = "A simple site tracking the development of the Servo browser engine."
 
 compile_sass = true
