@@ -15,7 +15,7 @@ This simple page just loads and parse through the data and list out the supporte
 - [x] Setup a GitHub page
 - [x] Rework to be built with Zola
 - [x] Automatic rebuilding every week
-- [ ] Host the page on a better domain
+- [x] Host the page on a better domain
 - [ ] Add in supported HTML/JS API tracking
 - [x] Improve frontend presentation
 - [ ] Add in performance tracking
