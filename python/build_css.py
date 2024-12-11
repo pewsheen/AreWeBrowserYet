@@ -94,7 +94,7 @@ def main():
 # +++
 # """)
         file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5%. (while the total css property count is {len(correlated_data)})\n\n")
-        file.write('Property | Percentage | Supported by Servo | Relevant Spec\n')
+        file.write('Property | Usage | Supported by Servo | Relevant Spec\n')
         file.write('--- | --- | --- | ---\n')
         for data in correlated_data:
             file.write(generate_line(data))
