@@ -46,10 +46,15 @@ def main():
     # the 'shorthands' and 'longhands' keys both return a dictionaries.
     # We'll extract the key alone and append it to the list.
     servo_properties = []
+    filter_prefs = ["layout.unimplemented"]
     for key in servo_properties_raw['shorthands'].keys():
+        if servo_properties_raw['shorthands'][key]["pref"] in filter_prefs:
+            continue
         servo_properties.append(key)
 
     for key in servo_properties_raw['longhands'].keys():
+        if servo_properties_raw['longhands'][key]["pref"] in filter_prefs:
+            continue
         servo_properties.append(key)
 
 
