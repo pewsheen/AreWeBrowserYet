@@ -1,4 +1,4 @@
-name: Download CSS properties and deploy pages
+name: Download CSS properties and build page
 on:
   push:
     branches:
