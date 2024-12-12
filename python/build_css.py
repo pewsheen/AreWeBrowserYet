@@ -1,4 +1,5 @@
 import json
+from types import NoneType
 
 def read_json_file(file_path):
     """
@@ -71,7 +72,7 @@ def main():
         if property_name.startswith('webkit-') or property_name.startswith('alias-'):
             continue
         if property_name in servo_properties.keys():
-            if servo_properties[property_name]["pref"] == None or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
+            if servo_properties[property_name]["pref"] is (None or NoneType) or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
                 entry['servo_supports'] = "supported"
             elif servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == False:
                 entry['servo_supports'] = "experimental"
