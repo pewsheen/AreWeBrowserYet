@@ -72,7 +72,7 @@ def main():
         if property_name.startswith('webkit-') or property_name.startswith('alias-'):
             continue
         if property_name in servo_properties.keys():
-            if servo_properties[property_name]["pref"] is (None or NoneType) or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
+            if servo_properties[property_name]["pref"] is None or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
                 entry['servo_supports'] = "supported"
             elif servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == False:
                 entry['servo_supports'] = "experimental"
@@ -87,7 +87,7 @@ def main():
     # We'll filter out the properties that have a usage of over 5%.
     number_of_properties_over_five_percent = [data for data in correlated_data if data['day_percentage'] >= 0.05]
     # We'll filter out the properties that are supported by Servo.
-    number_of_supported_properties_over_five_percent = [data for data in number_of_properties_over_five_percent if data['servo_supports']]
+    number_of_supported_properties_over_five_percent = [data for data in number_of_properties_over_five_percent if data['servo_supports'] == "supported"]
     stat_element = f"{len(number_of_supported_properties_over_five_percent)} / {len(number_of_properties_over_five_percent)}"
 
 
@@ -98,7 +98,7 @@ def main():
 # title = "Servo CSS Coverage"
 # +++
 # """)
-        file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5%. (while the total css property count is {len(correlated_data)})\n\n")
+        file.write(f"Servo supports {stat_element} of the properties that have a usage of over 5% (Not counting property support not enabled by default). While the total css property count is {len(correlated_data)}\n\n")
         file.write('Property | Usage | Supported by Servo | Relevant Spec\n')
         file.write('--- | --- | --- | ---\n')
         for data in correlated_data:
