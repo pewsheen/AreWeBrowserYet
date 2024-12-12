@@ -24,6 +24,10 @@ jobs:
         run: |
           wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
 
+      - name: Download Servo default prefs.json
+        run: |
+          wget https://github.com/servo/servo/blob/main/resources/prefs.json -O ./static/servo-default-pref.json
+
       - name: Download Google supported CSS properties
         run: |
           wget https://chromestatus.com/data/csspopularity -O ./static/google-css-popularity.json

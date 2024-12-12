@@ -22,7 +22,12 @@ def generate_line(data):
     # display the percentage of usage of the property, with a % sign, formatted with only 2 decimal places
     line += f" | {data['day_percentage']*100:.2f}%"
     # display if the property is supported by Servo
-    line += f" | " + ("✅" if data['servo_supports'] else "❌")
+    if data['servo_supports'] == "supported":
+        line += f" | ✅"
+    elif data['servo_supports'] == "experimental":
+        line += f" | 🧪"
+    else:
+        line += f" | ❌"
     # display the relevant specs for the property
     line += f" | {generate_spec_links(data)}\n"
     return line
@@ -36,26 +41,17 @@ def main():
     w3_css_properties = './static/w3-all-properties.json'
     google_css_popularity = './static/google-css-popularity.json'
     servo_css_properties = './static/servo-css-properties.json'
+    servo_default_pref = './static/servo-default-pref.json'
 
     w3_properties = read_json_file(w3_css_properties)
     google_popularity = read_json_file(google_css_popularity)
     servo_properties_raw = read_json_file(servo_css_properties)
+    servo_pref = read_json_file(servo_default_pref)
     
     # Servo's supported properties will be listed in two categories: shorthand and longhand.
-    # We'll simply extract both into one list.
+    # We'll simply extract both into one long list.
     # the 'shorthands' and 'longhands' keys both return a dictionaries.
-    # We'll extract the key alone and append it to the list.
-    servo_properties = []
-    filter_prefs = ["layout.unimplemented"]
-    for key in servo_properties_raw['shorthands'].keys():
-        if servo_properties_raw['shorthands'][key]["pref"] in filter_prefs:
-            continue
-        servo_properties.append(key)
-
-    for key in servo_properties_raw['longhands'].keys():
-        if servo_properties_raw['longhands'][key]["pref"] in filter_prefs:
-            continue
-        servo_properties.append(key)
+    servo_properties = {**servo_properties_raw['shorthands'], **servo_properties_raw['longhands']}
 
 
     # We'll create a dictionary where the key is the property name and the value is a list of entries.
@@ -74,7 +70,15 @@ def main():
         property_name = entry['property_name']
         if property_name.startswith('webkit-') or property_name.startswith('alias-'):
             continue
-        entry['servo_supports'] = property_name in servo_properties
+        if property_name in servo_properties.keys():
+            if servo_properties[property_name]["pref"] == None or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
+                entry['servo_supports'] = "supported"
+            elif servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == False:
+                entry['servo_supports'] = "experimental"
+            else:
+                entry['servo_supports'] = "unsupported"
+        else:
+            entry['servo_supports'] = "unsupported"
         if property_name in spec_data:
             entry['specs'] = spec_data[property_name]
         correlated_data.append(entry)
