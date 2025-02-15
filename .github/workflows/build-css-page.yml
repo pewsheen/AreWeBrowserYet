@@ -25,10 +25,10 @@ jobs:
           wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
 
 
-      # Might need a more reliable way of retrieving this
-      - name: Download Servo default prefs.json
-        run: |
-          wget https://raw.githubusercontent.com/servo/servo/refs/heads/main/resources/prefs.json -O ./static/servo-default-pref.json
+      # Need another way of retrieving default Servo preference
+      # - name: Download Servo default prefs.json
+      #   run: |
+      #     wget https://raw.githubusercontent.com/servo/servo/refs/heads/main/resources/prefs.json -O ./static/servo-default-pref.json
 
       - name: Download Google supported CSS properties
         run: |

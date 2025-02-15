@@ -42,12 +42,12 @@ def main():
     w3_css_properties = './static/w3-all-properties.json'
     google_css_popularity = './static/google-css-popularity.json'
     servo_css_properties = './static/servo-css-properties.json'
-    servo_default_pref = './static/servo-default-pref.json'
+    # servo_default_pref = './static/servo-default-pref.json'
 
     w3_properties = read_json_file(w3_css_properties)
     google_popularity = read_json_file(google_css_popularity)
     servo_properties_raw = read_json_file(servo_css_properties)
-    servo_pref = read_json_file(servo_default_pref)
+    # servo_pref = read_json_file(servo_default_pref)
     
     # Servo's supported properties will be listed in two categories: shorthand and longhand.
     # We'll simply extract both into one long list.
@@ -72,12 +72,14 @@ def main():
         if property_name.startswith('webkit-') or property_name.startswith('alias-'):
             continue
         if property_name in servo_properties.keys():
-            if servo_properties[property_name]["pref"] is None or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
-                entry['servo_supports'] = "supported"
-            elif servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == False:
-                entry['servo_supports'] = "experimental"
-            else:
-                entry['servo_supports'] = "unsupported"
+            # Due to the removal of prefs.json, we cannot properly check if the property is supported by default easily at the moment.
+            entry['servo_supports'] = "supported"
+            # if servo_properties[property_name]["pref"] is None or servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == True:
+            #     entry['servo_supports'] = "supported"
+            # elif servo_properties[property_name]["pref"] in servo_pref and servo_pref[servo_properties[property_name]["pref"]] == False:
+            #     entry['servo_supports'] = "experimental"
+            # else:
+            #     entry['servo_supports'] = "unsupported"
         else:
             entry['servo_supports'] = "unsupported"
         if property_name in spec_data:
