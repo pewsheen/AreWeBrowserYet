@@ -1,0 +1,98 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+  schedule:
+    # Re-deploy weekly to automatically track changes
+    - cron: '5 8 * * 6'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  setup-and-deploy:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Remove label from PR
+        if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pr_number=${{ github.event.pull_request.number }}
+          label_to_remove="preview-build"
+          gh pr edit "$pr_number" --remove-label "$label_to_remove"
+
+      - name: Post initial workflow start comment
+        if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
+        id: comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            :hourglass_flowing_sand: Running build preview for PR.
+            
+            <!-- workflow-preview-build-label -->
+
+      - name: Download CSS properties JSON From W3
+        run: |
+          wget https://www.w3.org/Style/CSS/all-properties.en.json -O ./static/w3-all-properties.json
+
+      - name: Download Servo supported CSS properties
+        run: |
+          wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
+
+
+      # Need another way of retrieving default Servo preference
+      # - name: Download Servo default prefs.json
+      #   run: |
+      #     wget https://raw.githubusercontent.com/servo/servo/refs/heads/main/resources/prefs.json -O ./static/servo-default-pref.json
+
+      - name: Download Google supported CSS properties
+        run: |
+          wget https://chromestatus.com/data/csspopularity -O ./static/google-css-popularity.json
+
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' 
+      - name:
+        run: |
+          python ./python/build_css.py
+
+      - name: Build Test
+        if: github.ref != 'refs/heads/main' && !contains(github.event.pull_request.labels.*.name, 'preview-build')
+        uses: shalzz/zola-deploy-action@v0.20.0
+        env:
+          BUILD_ONLY: true
+          BUILD_FLAGS: --drafts
+      - name: Preview Pull Request
+        if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
+        uses: shalzz/zola-deploy-action@v0.20.0
+        env:
+          PAGES_BRANCH: pr-preview
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update comment with completion status
+        if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.comment.outputs.comment-id }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            :white_check_mark: PR preview build completed at https://github.com/dklassic/AreWeBrowserYet/tree/pr-preview.
+      - name: Build and deploy
+        if: github.ref == 'refs/heads/main'
+        uses: shalzz/zola-deploy-action@v0.20.0
+        env:
+          PAGES_BRANCH: gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
