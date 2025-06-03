@@ -1,0 +1,2138 @@
+[
+    {
+        "bucket_id": 28,
+        "date": "2025-06-01",
+        "day_percentage": 0.83069815,
+        "property_name": "Flexbox"
+    },
+    {
+        "bucket_id": 189,
+        "date": "2025-06-01",
+        "day_percentage": 0.77249636,
+        "property_name": "Outline"
+    },
+    {
+        "bucket_id": 341,
+        "date": "2025-06-01",
+        "day_percentage": 0.687294,
+        "property_name": "UaClientHints"
+    },
+    {
+        "bucket_id": 323,
+        "date": "2025-06-01",
+        "day_percentage": 0.625929,
+        "property_name": "RequestAnimationFrame"
+    },
+    {
+        "bucket_id": 62,
+        "date": "2025-06-01",
+        "day_percentage": 0.59323796,
+        "property_name": "Slot"
+    },
+    {
+        "bucket_id": 275,
+        "date": "2025-06-01",
+        "day_percentage": 0.57842467,
+        "property_name": "Beforeunload"
+    },
+    {
+        "bucket_id": 275,
+        "date": "2025-06-01",
+        "day_percentage": 0.57842467,
+        "property_name": "Beforeunload"
+    },
+    {
+        "bucket_id": 3,
+        "date": "2025-06-01",
+        "day_percentage": 0.54756819,
+        "property_name": "Popover"
+    },
+    {
+        "bucket_id": 45,
+        "date": "2025-06-01",
+        "day_percentage": 0.54202457,
+        "property_name": "IntersectionObserver"
+    },
+    {
+        "bucket_id": 29,
+        "date": "2025-06-01",
+        "day_percentage": 0.49657854,
+        "property_name": "FocusVisible"
+    },
+    {
+        "bucket_id": 79,
+        "date": "2025-06-01",
+        "day_percentage": 0.4565477,
+        "property_name": "Webp"
+    },
+    {
+        "bucket_id": 200,
+        "date": "2025-06-01",
+        "day_percentage": 0.45638335,
+        "property_name": "Canvas"
+    },
+    {
+        "bucket_id": 8,
+        "date": "2025-06-01",
+        "day_percentage": 0.45317208,
+        "property_name": "Appearance"
+    },
+    {
+        "bucket_id": 316,
+        "date": "2025-06-01",
+        "day_percentage": 0.445742,
+        "property_name": "Http3"
+    },
+    {
+        "bucket_id": 27,
+        "date": "2025-06-01",
+        "day_percentage": 0.443914,
+        "property_name": "FlexboxGap"
+    },
+    {
+        "bucket_id": 124,
+        "date": "2025-06-01",
+        "day_percentage": 0.43665694,
+        "property_name": "Aborting"
+    },
+    {
+        "bucket_id": 202,
+        "date": "2025-06-01",
+        "day_percentage": 0.41278283,
+        "property_name": "Canvas2dAlpha"
+    },
+    {
+        "bucket_id": 202,
+        "date": "2025-06-01",
+        "day_percentage": 0.41278283,
+        "property_name": "Canvas2dAlpha"
+    },
+    {
+        "bucket_id": 39,
+        "date": "2025-06-01",
+        "day_percentage": 0.39300105,
+        "property_name": "Has"
+    },
+    {
+        "bucket_id": 131,
+        "date": "2025-06-01",
+        "day_percentage": 0.39188907,
+        "property_name": "BackgroundClipText"
+    },
+    {
+        "bucket_id": 38,
+        "date": "2025-06-01",
+        "day_percentage": 0.37734826,
+        "property_name": "Grid"
+    },
+    {
+        "bucket_id": 291,
+        "date": "2025-06-01",
+        "day_percentage": 0.37552428,
+        "property_name": "Zstd"
+    },
+    {
+        "bucket_id": 57,
+        "date": "2025-06-01",
+        "day_percentage": 0.37328969,
+        "property_name": "ScrollbarWidth"
+    },
+    {
+        "bucket_id": 277,
+        "date": "2025-06-01",
+        "day_percentage": 0.37277035,
+        "property_name": "LayoutInstability"
+    },
+    {
+        "bucket_id": 216,
+        "date": "2025-06-01",
+        "day_percentage": 0.3666838,
+        "property_name": "ClipPath"
+    },
+    {
+        "bucket_id": 69,
+        "date": "2025-06-01",
+        "day_percentage": 0.36556669,
+        "property_name": "TextIndent"
+    },
+    {
+        "bucket_id": 87,
+        "date": "2025-06-01",
+        "day_percentage": 0.35721551,
+        "property_name": "WillChange"
+    },
+    {
+        "bucket_id": 68,
+        "date": "2025-06-01",
+        "day_percentage": 0.35629079,
+        "property_name": "Template"
+    },
+    {
+        "bucket_id": 338,
+        "date": "2025-06-01",
+        "day_percentage": 0.349163,
+        "property_name": "Requestidlecallback"
+    },
+    {
+        "bucket_id": 201,
+        "date": "2025-06-01",
+        "day_percentage": 0.32625316,
+        "property_name": "Canvas2d"
+    },
+    {
+        "bucket_id": 201,
+        "date": "2025-06-01",
+        "day_percentage": 0.32625316,
+        "property_name": "Canvas2d"
+    },
+    {
+        "bucket_id": 260,
+        "date": "2025-06-01",
+        "day_percentage": 0.31849351,
+        "property_name": "ReferrerPolicy"
+    },
+    {
+        "bucket_id": 101,
+        "date": "2025-06-01",
+        "day_percentage": 0.31678782,
+        "property_name": "Masks"
+    },
+    {
+        "bucket_id": 268,
+        "date": "2025-06-01",
+        "day_percentage": 0.30270684,
+        "property_name": "FetchPriority"
+    },
+    {
+        "bucket_id": 9,
+        "date": "2025-06-01",
+        "day_percentage": 0.30139321,
+        "property_name": "AspectRatio"
+    },
+    {
+        "bucket_id": 165,
+        "date": "2025-06-01",
+        "day_percentage": 0.29857521,
+        "property_name": "ForcedColors"
+    },
+    {
+        "bucket_id": 11,
+        "date": "2025-06-01",
+        "day_percentage": 0.27505747,
+        "property_name": "BackdropFilter"
+    },
+    {
+        "bucket_id": 252,
+        "date": "2025-06-01",
+        "day_percentage": 0.27084518,
+        "property_name": "StringReplaceall"
+    },
+    {
+        "bucket_id": 168,
+        "date": "2025-06-01",
+        "day_percentage": 0.26741801,
+        "property_name": "LogicalProperties"
+    },
+    {
+        "bucket_id": 46,
+        "date": "2025-06-01",
+        "day_percentage": 0.24814949,
+        "property_name": "Is"
+    },
+    {
+        "bucket_id": 47,
+        "date": "2025-06-01",
+        "day_percentage": 0.24663735,
+        "property_name": "JsModules"
+    },
+    {
+        "bucket_id": 282,
+        "date": "2025-06-01",
+        "day_percentage": 0.24043037,
+        "property_name": "AttributionReporting"
+    },
+    {
+        "bucket_id": 58,
+        "date": "2025-06-01",
+        "day_percentage": 0.22450004,
+        "property_name": "Scrollend"
+    },
+    {
+        "bucket_id": 302,
+        "date": "2025-06-01",
+        "day_percentage": 0.21699725,
+        "property_name": "Manifest"
+    },
+    {
+        "bucket_id": 99,
+        "date": "2025-06-01",
+        "day_percentage": 0.20453647,
+        "property_name": "StructuredClone"
+    },
+    {
+        "bucket_id": 83,
+        "date": "2025-06-01",
+        "day_percentage": 0.20420496,
+        "property_name": "Where"
+    },
+    {
+        "bucket_id": 181,
+        "date": "2025-06-01",
+        "day_percentage": 0.17693533,
+        "property_name": "TextWrap"
+    },
+    {
+        "bucket_id": 174,
+        "date": "2025-06-01",
+        "day_percentage": 0.1749654,
+        "property_name": "PrefersContrast"
+    },
+    {
+        "bucket_id": 16,
+        "date": "2025-06-01",
+        "day_percentage": 0.16415304,
+        "property_name": "ColorScheme"
+    },
+    {
+        "bucket_id": 199,
+        "date": "2025-06-01",
+        "day_percentage": 0.15787024,
+        "property_name": "DisplayMode"
+    },
+    {
+        "bucket_id": 1,
+        "date": "2025-06-01",
+        "day_percentage": 0.15475979,
+        "property_name": "CompressionStreams"
+    },
+    {
+        "bucket_id": 59,
+        "date": "2025-06-01",
+        "day_percentage": 0.15024688,
+        "property_name": "ScrollSnap"
+    },
+    {
+        "bucket_id": 161,
+        "date": "2025-06-01",
+        "day_percentage": 0.14784425,
+        "property_name": "Lh"
+    },
+    {
+        "bucket_id": 303,
+        "date": "2025-06-01",
+        "day_percentage": 0.14542452,
+        "property_name": "Beforeinstallprompt"
+    },
+    {
+        "bucket_id": 303,
+        "date": "2025-06-01",
+        "day_percentage": 0.14542452,
+        "property_name": "Beforeinstallprompt"
+    },
+    {
+        "bucket_id": 112,
+        "date": "2025-06-01",
+        "day_percentage": 0.14028408,
+        "property_name": "OverflowShorthand"
+    },
+    {
+        "bucket_id": 336,
+        "date": "2025-06-01",
+        "day_percentage": 0.129641,
+        "property_name": "OverflowClip"
+    },
+    {
+        "bucket_id": 96,
+        "date": "2025-06-01",
+        "day_percentage": 0.12939642,
+        "property_name": "AriaAttributeReflection"
+    },
+    {
+        "bucket_id": 274,
+        "date": "2025-06-01",
+        "day_percentage": 0.12850364,
+        "property_name": "Barprop"
+    },
+    {
+        "bucket_id": 274,
+        "date": "2025-06-01",
+        "day_percentage": 0.12850364,
+        "property_name": "Barprop"
+    },
+    {
+        "bucket_id": 254,
+        "date": "2025-06-01",
+        "day_percentage": 0.12183556,
+        "property_name": "WeakReferences"
+    },
+    {
+        "bucket_id": 250,
+        "date": "2025-06-01",
+        "day_percentage": 0.11655571,
+        "property_name": "ViewportUnitVariants"
+    },
+    {
+        "bucket_id": 14,
+        "date": "2025-06-01",
+        "day_percentage": 0.11617752,
+        "property_name": "BroadcastChannel"
+    },
+    {
+        "bucket_id": 43,
+        "date": "2025-06-01",
+        "day_percentage": 0.11368611,
+        "property_name": "IndividualTransforms"
+    },
+    {
+        "bucket_id": 331,
+        "date": "2025-06-01",
+        "day_percentage": 0.110959,
+        "property_name": "TextUnderlineOffset"
+    },
+    {
+        "bucket_id": 236,
+        "date": "2025-06-01",
+        "day_percentage": 0.10962473,
+        "property_name": "LongAnimationFrames"
+    },
+    {
+        "bucket_id": 40,
+        "date": "2025-06-01",
+        "day_percentage": 0.10936673,
+        "property_name": "Hyphens"
+    },
+    {
+        "bucket_id": 276,
+        "date": "2025-06-01",
+        "day_percentage": 0.10727936,
+        "property_name": "BfcacheBlockingReasons"
+    },
+    {
+        "bucket_id": 317,
+        "date": "2025-06-01",
+        "day_percentage": 0.105755,
+        "property_name": "SpeculationRules"
+    },
+    {
+        "bucket_id": 55,
+        "date": "2025-06-01",
+        "day_percentage": 0.10535483,
+        "property_name": "ScrollbarColor"
+    },
+    {
+        "bucket_id": 231,
+        "date": "2025-06-01",
+        "day_percentage": 0.10384707,
+        "property_name": "WebAnimations"
+    },
+    {
+        "bucket_id": 56,
+        "date": "2025-06-01",
+        "day_percentage": 0.09968728,
+        "property_name": "ScrollbarGutter"
+    },
+    {
+        "bucket_id": 197,
+        "date": "2025-06-01",
+        "day_percentage": 0.09478227,
+        "property_name": "Marker"
+    },
+    {
+        "bucket_id": 213,
+        "date": "2025-06-01",
+        "day_percentage": 0.09228329,
+        "property_name": "Quotes"
+    },
+    {
+        "bucket_id": 19,
+        "date": "2025-06-01",
+        "day_percentage": 0.09073621,
+        "property_name": "ContainerQueries"
+    },
+    {
+        "bucket_id": 44,
+        "date": "2025-06-01",
+        "day_percentage": 0.08586438,
+        "property_name": "IntersectionObserverV2"
+    },
+    {
+        "bucket_id": 118,
+        "date": "2025-06-01",
+        "day_percentage": 0.08400554,
+        "property_name": "Scheduler"
+    },
+    {
+        "bucket_id": 18,
+        "date": "2025-06-01",
+        "day_percentage": 0.08074237,
+        "property_name": "ConstructedStylesheets"
+    },
+    {
+        "bucket_id": 25,
+        "date": "2025-06-01",
+        "day_percentage": 0.08038354,
+        "property_name": "Dialog"
+    },
+    {
+        "bucket_id": 315,
+        "date": "2025-06-01",
+        "day_percentage": 0.079814,
+        "property_name": "CompressionDictionaryTransport"
+    },
+    {
+        "bucket_id": 10,
+        "date": "2025-06-01",
+        "day_percentage": 0.07441296,
+        "property_name": "Avif"
+    },
+    {
+        "bucket_id": 163,
+        "date": "2025-06-01",
+        "day_percentage": 0.07314165,
+        "property_name": "Nesting"
+    },
+    {
+        "bucket_id": 164,
+        "date": "2025-06-01",
+        "day_percentage": 0.07280871,
+        "property_name": "NthChildOf"
+    },
+    {
+        "bucket_id": 102,
+        "date": "2025-06-01",
+        "day_percentage": 0.07275479,
+        "property_name": "DeviceOrientationEvents"
+    },
+    {
+        "bucket_id": 253,
+        "date": "2025-06-01",
+        "day_percentage": 0.06881221,
+        "property_name": "StringWellformed"
+    },
+    {
+        "bucket_id": 289,
+        "date": "2025-06-01",
+        "day_percentage": 0.06632725,
+        "property_name": "MediaPlaybackQuality"
+    },
+    {
+        "bucket_id": 21,
+        "date": "2025-06-01",
+        "day_percentage": 0.06238548,
+        "property_name": "ContainIntrinsicSize"
+    },
+    {
+        "bucket_id": 284,
+        "date": "2025-06-01",
+        "day_percentage": 0.06204802,
+        "property_name": "Fencedframe"
+    },
+    {
+        "bucket_id": 82,
+        "date": "2025-06-01",
+        "day_percentage": 0.06204457,
+        "property_name": "Webvtt"
+    },
+    {
+        "bucket_id": 13,
+        "date": "2025-06-01",
+        "day_percentage": 0.05497125,
+        "property_name": "BorderImage"
+    },
+    {
+        "bucket_id": 49,
+        "date": "2025-06-01",
+        "day_percentage": 0.05334656,
+        "property_name": "OffscreenCanvas"
+    },
+    {
+        "bucket_id": 148,
+        "date": "2025-06-01",
+        "day_percentage": 0.05329384,
+        "property_name": "ContentVisibility"
+    },
+    {
+        "bucket_id": 145,
+        "date": "2025-06-01",
+        "day_percentage": 0.05284132,
+        "property_name": "MediaQueryRangeSyntax"
+    },
+    {
+        "bucket_id": 257,
+        "date": "2025-06-01",
+        "day_percentage": 0.05066055,
+        "property_name": "PdfViewer"
+    },
+    {
+        "bucket_id": 185,
+        "date": "2025-06-01",
+        "day_percentage": 0.05022371,
+        "property_name": "FileSelectorButton"
+    },
+    {
+        "bucket_id": 151,
+        "date": "2025-06-01",
+        "day_percentage": 0.04973667,
+        "property_name": "OfflineAudioContext"
+    },
+    {
+        "bucket_id": 306,
+        "date": "2025-06-01",
+        "day_percentage": 0.04608867,
+        "property_name": "Fetchlater"
+    },
+    {
+        "bucket_id": 306,
+        "date": "2025-06-01",
+        "day_percentage": 0.04608867,
+        "property_name": "Fetchlater"
+    },
+    {
+        "bucket_id": 205,
+        "date": "2025-06-01",
+        "day_percentage": 0.04547515,
+        "property_name": "Canvas2dWillreadfrequently"
+    },
+    {
+        "bucket_id": 205,
+        "date": "2025-06-01",
+        "day_percentage": 0.04547515,
+        "property_name": "Canvas2dWillreadfrequently"
+    },
+    {
+        "bucket_id": 261,
+        "date": "2025-06-01",
+        "day_percentage": 0.04368314,
+        "property_name": "UrlCanparse"
+    },
+    {
+        "bucket_id": 144,
+        "date": "2025-06-01",
+        "day_percentage": 0.04286432,
+        "property_name": "DocumentCaretpositionfrompoint"
+    },
+    {
+        "bucket_id": 206,
+        "date": "2025-06-01",
+        "day_percentage": 0.04242928,
+        "property_name": "Ch"
+    },
+    {
+        "bucket_id": 116,
+        "date": "2025-06-01",
+        "day_percentage": 0.03976888,
+        "property_name": "KeyboardMap"
+    },
+    {
+        "bucket_id": 335,
+        "date": "2025-06-01",
+        "day_percentage": 0.037153,
+        "property_name": "LineBreak"
+    },
+    {
+        "bucket_id": 78,
+        "date": "2025-06-01",
+        "day_percentage": 0.03590085,
+        "property_name": "WebLocks"
+    },
+    {
+        "bucket_id": 198,
+        "date": "2025-06-01",
+        "day_percentage": 0.03429038,
+        "property_name": "DynamicRange"
+    },
+    {
+        "bucket_id": 146,
+        "date": "2025-06-01",
+        "day_percentage": 0.03327737,
+        "property_name": "RegisteredCustomProperties"
+    },
+    {
+        "bucket_id": 227,
+        "date": "2025-06-01",
+        "day_percentage": 0.03295302,
+        "property_name": "SetMethods"
+    },
+    {
+        "bucket_id": 326,
+        "date": "2025-06-01",
+        "day_percentage": 0.032493,
+        "property_name": "Urlpattern"
+    },
+    {
+        "bucket_id": 95,
+        "date": "2025-06-01",
+        "day_percentage": 0.03229479,
+        "property_name": "ColorMix"
+    },
+    {
+        "bucket_id": 150,
+        "date": "2025-06-01",
+        "day_percentage": 0.03185522,
+        "property_name": "WebAudio"
+    },
+    {
+        "bucket_id": 226,
+        "date": "2025-06-01",
+        "day_percentage": 0.03138377,
+        "property_name": "PromiseAny"
+    },
+    {
+        "bucket_id": 48,
+        "date": "2025-06-01",
+        "day_percentage": 0.03130016,
+        "property_name": "MediaSession"
+    },
+    {
+        "bucket_id": 65,
+        "date": "2025-06-01",
+        "day_percentage": 0.03088418,
+        "property_name": "StorageAccess"
+    },
+    {
+        "bucket_id": 283,
+        "date": "2025-06-01",
+        "day_percentage": 0.02893935,
+        "property_name": "CookieStore"
+    },
+    {
+        "bucket_id": 85,
+        "date": "2025-06-01",
+        "day_percentage": 0.0285599,
+        "property_name": "DirPseudo"
+    },
+    {
+        "bucket_id": 251,
+        "date": "2025-06-01",
+        "day_percentage": 0.02773213,
+        "property_name": "PromiseTry"
+    },
+    {
+        "bucket_id": 115,
+        "date": "2025-06-01",
+        "day_percentage": 0.025794,
+        "property_name": "OBSOLETE_ElementCheckVisibility"
+    },
+    {
+        "bucket_id": 186,
+        "date": "2025-06-01",
+        "day_percentage": 0.02282852,
+        "property_name": "LinearEasing"
+    },
+    {
+        "bucket_id": 194,
+        "date": "2025-06-01",
+        "day_percentage": 0.02265168,
+        "property_name": "TransformBox"
+    },
+    {
+        "bucket_id": 218,
+        "date": "2025-06-01",
+        "day_percentage": 0.02209648,
+        "property_name": "BoxDecorationBreak"
+    },
+    {
+        "bucket_id": 175,
+        "date": "2025-06-01",
+        "day_percentage": 0.02208734,
+        "property_name": "PrefersReducedTransparency"
+    },
+    {
+        "bucket_id": 173,
+        "date": "2025-06-01",
+        "day_percentage": 0.02164862,
+        "property_name": "RevertValue"
+    },
+    {
+        "bucket_id": 53,
+        "date": "2025-06-01",
+        "day_percentage": 0.02152164,
+        "property_name": "RelativeColor"
+    },
+    {
+        "bucket_id": 133,
+        "date": "2025-06-01",
+        "day_percentage": 0.02131683,
+        "property_name": "CheckVisibility"
+    },
+    {
+        "bucket_id": 84,
+        "date": "2025-06-01",
+        "day_percentage": 0.01954307,
+        "property_name": "Datalist"
+    },
+    {
+        "bucket_id": 305,
+        "date": "2025-06-01",
+        "day_percentage": 0.01896888,
+        "property_name": "AppShortcuts"
+    },
+    {
+        "bucket_id": 239,
+        "date": "2025-06-01",
+        "day_percentage": 0.01866353,
+        "property_name": "ArrayGroup"
+    },
+    {
+        "bucket_id": 170,
+        "date": "2025-06-01",
+        "day_percentage": 0.01781393,
+        "property_name": "Oklab"
+    },
+    {
+        "bucket_id": 328,
+        "date": "2025-06-01",
+        "day_percentage": 0.017072,
+        "property_name": "IntlDisplayNames"
+    },
+    {
+        "bucket_id": 330,
+        "date": "2025-06-01",
+        "day_percentage": 0.016867,
+        "property_name": "PrintColorAdjust"
+    },
+    {
+        "bucket_id": 187,
+        "date": "2025-06-01",
+        "day_percentage": 0.0168382,
+        "property_name": "Modal"
+    },
+    {
+        "bucket_id": 235,
+        "date": "2025-06-01",
+        "day_percentage": 0.01664907,
+        "property_name": "InterpolateSize"
+    },
+    {
+        "bucket_id": 128,
+        "date": "2025-06-01",
+        "day_percentage": 0.015986,
+        "property_name": "Inert"
+    },
+    {
+        "bucket_id": 104,
+        "date": "2025-06-01",
+        "day_percentage": 0.01553608,
+        "property_name": "ScreenWakeLock"
+    },
+    {
+        "bucket_id": 129,
+        "date": "2025-06-01",
+        "day_percentage": 0.0154554,
+        "property_name": "IntlSegmenter"
+    },
+    {
+        "bucket_id": 220,
+        "date": "2025-06-01",
+        "day_percentage": 0.01500385,
+        "property_name": "FontSizeAdjust"
+    },
+    {
+        "bucket_id": 247,
+        "date": "2025-06-01",
+        "day_percentage": 0.01440745,
+        "property_name": "Fedcm"
+    },
+    {
+        "bucket_id": 5,
+        "date": "2025-06-01",
+        "day_percentage": 0.01413496,
+        "property_name": "CascadeLayers"
+    },
+    {
+        "bucket_id": 6,
+        "date": "2025-06-01",
+        "day_percentage": 0.01361792,
+        "property_name": "AccentColor"
+    },
+    {
+        "bucket_id": 298,
+        "date": "2025-06-01",
+        "day_percentage": 0.0136117,
+        "property_name": "Float16array"
+    },
+    {
+        "bucket_id": 298,
+        "date": "2025-06-01",
+        "day_percentage": 0.0136117,
+        "property_name": "Float16array"
+    },
+    {
+        "bucket_id": 71,
+        "date": "2025-06-01",
+        "day_percentage": 0.01344587,
+        "property_name": "TextWrapBalance"
+    },
+    {
+        "bucket_id": 225,
+        "date": "2025-06-01",
+        "day_percentage": 0.01315522,
+        "property_name": "IteratorMethods"
+    },
+    {
+        "bucket_id": 233,
+        "date": "2025-06-01",
+        "day_percentage": 0.01259893,
+        "property_name": "DisplayAnimation"
+    },
+    {
+        "bucket_id": 36,
+        "date": "2025-06-01",
+        "day_percentage": 0.01249282,
+        "property_name": "FontSynthesis"
+    },
+    {
+        "bucket_id": 30,
+        "date": "2025-06-01",
+        "day_percentage": 0.01224251,
+        "property_name": "FontOpticalSizing"
+    },
+    {
+        "bucket_id": 223,
+        "date": "2025-06-01",
+        "day_percentage": 0.01096965,
+        "property_name": "ArrayByCopy"
+    },
+    {
+        "bucket_id": 309,
+        "date": "2025-06-01",
+        "day_percentage": 0.01061532,
+        "property_name": "LaunchHandler"
+    },
+    {
+        "bucket_id": 309,
+        "date": "2025-06-01",
+        "day_percentage": 0.01061532,
+        "property_name": "LaunchHandler"
+    },
+    {
+        "bucket_id": 238,
+        "date": "2025-06-01",
+        "day_percentage": 0.00917274,
+        "property_name": "ArrayFindlast"
+    },
+    {
+        "bucket_id": 72,
+        "date": "2025-06-01",
+        "day_percentage": 0.00899844,
+        "property_name": "TextWrapPretty"
+    },
+    {
+        "bucket_id": 143,
+        "date": "2025-06-01",
+        "day_percentage": 0.00864395,
+        "property_name": "StartingStyle"
+    },
+    {
+        "bucket_id": 244,
+        "date": "2025-06-01",
+        "day_percentage": 0.00847251,
+        "property_name": "IntlLocaleInfo"
+    },
+    {
+        "bucket_id": 240,
+        "date": "2025-06-01",
+        "day_percentage": 0.00798265,
+        "property_name": "PromiseWithresolvers"
+    },
+    {
+        "bucket_id": 230,
+        "date": "2025-06-01",
+        "day_percentage": 0.00768841,
+        "property_name": "ScrollDrivenAnimations"
+    },
+    {
+        "bucket_id": 290,
+        "date": "2025-06-01",
+        "day_percentage": 0.00751131,
+        "property_name": "Webgpu"
+    },
+    {
+        "bucket_id": 195,
+        "date": "2025-06-01",
+        "day_percentage": 0.00669508,
+        "property_name": "Update"
+    },
+    {
+        "bucket_id": 166,
+        "date": "2025-06-01",
+        "day_percentage": 0.00660272,
+        "property_name": "WhiteSpaceCollapse"
+    },
+    {
+        "bucket_id": 178,
+        "date": "2025-06-01",
+        "day_percentage": 0.0063545,
+        "property_name": "GradientInterpolation"
+    },
+    {
+        "bucket_id": 318,
+        "date": "2025-06-01",
+        "day_percentage": 0.006347,
+        "property_name": "TextBox"
+    },
+    {
+        "bucket_id": 109,
+        "date": "2025-06-01",
+        "day_percentage": 0.00627207,
+        "property_name": "JsModulesSharedWorkers"
+    },
+    {
+        "bucket_id": 154,
+        "date": "2025-06-01",
+        "day_percentage": 0.00585706,
+        "property_name": "RequestVideoFrameCallback"
+    },
+    {
+        "bucket_id": 297,
+        "date": "2025-06-01",
+        "day_percentage": 0.00565626,
+        "property_name": "RegexpEscape"
+    },
+    {
+        "bucket_id": 297,
+        "date": "2025-06-01",
+        "day_percentage": 0.00565626,
+        "property_name": "RegexpEscape"
+    },
+    {
+        "bucket_id": 126,
+        "date": "2025-06-01",
+        "day_percentage": 0.00564275,
+        "property_name": "PaintOrder"
+    },
+    {
+        "bucket_id": 232,
+        "date": "2025-06-01",
+        "day_percentage": 0.00559436,
+        "property_name": "CrossDocumentViewTransitions"
+    },
+    {
+        "bucket_id": 88,
+        "date": "2025-06-01",
+        "day_percentage": 0.00495735,
+        "property_name": "AbortsignalAny"
+    },
+    {
+        "bucket_id": 337,
+        "date": "2025-06-01",
+        "day_percentage": 0.004893,
+        "property_name": "LightDark"
+    },
+    {
+        "bucket_id": 111,
+        "date": "2025-06-01",
+        "day_percentage": 0.00437743,
+        "property_name": "TwoValueDisplay"
+    },
+    {
+        "bucket_id": 149,
+        "date": "2025-06-01",
+        "day_percentage": 0.00421273,
+        "property_name": "CounterSet"
+    },
+    {
+        "bucket_id": 237,
+        "date": "2025-06-01",
+        "day_percentage": 0.00404918,
+        "property_name": "PageVisibilityState"
+    },
+    {
+        "bucket_id": 110,
+        "date": "2025-06-01",
+        "day_percentage": 0.00402443,
+        "property_name": "JsModulesWorkers"
+    },
+    {
+        "bucket_id": 169,
+        "date": "2025-06-01",
+        "day_percentage": 0.00383595,
+        "property_name": "ColorFunction"
+    },
+    {
+        "bucket_id": 42,
+        "date": "2025-06-01",
+        "day_percentage": 0.0037326,
+        "property_name": "ImportMaps"
+    },
+    {
+        "bucket_id": 73,
+        "date": "2025-06-01",
+        "day_percentage": 0.00371983,
+        "property_name": "TransitionBehavior"
+    },
+    {
+        "bucket_id": 188,
+        "date": "2025-06-01",
+        "day_percentage": 0.00369547,
+        "property_name": "MotionPath"
+    },
+    {
+        "bucket_id": 219,
+        "date": "2025-06-01",
+        "day_percentage": 0.00355455,
+        "property_name": "PageOrientation"
+    },
+    {
+        "bucket_id": 22,
+        "date": "2025-06-01",
+        "day_percentage": 0.0035376,
+        "property_name": "CounterStyle"
+    },
+    {
+        "bucket_id": 113,
+        "date": "2025-06-01",
+        "day_percentage": 0.00343636,
+        "property_name": "FieldSizing"
+    },
+    {
+        "bucket_id": 70,
+        "date": "2025-06-01",
+        "day_percentage": 0.00331257,
+        "property_name": "TextSpacingTrim"
+    },
+    {
+        "bucket_id": 7,
+        "date": "2025-06-01",
+        "day_percentage": 0.00322854,
+        "property_name": "AnimationComposition"
+    },
+    {
+        "bucket_id": 125,
+        "date": "2025-06-01",
+        "day_percentage": 0.0032061,
+        "property_name": "EditContext"
+    },
+    {
+        "bucket_id": 94,
+        "date": "2025-06-01",
+        "day_percentage": 0.003158,
+        "property_name": "OBSOLETE_CanvasTextBaselines"
+    },
+    {
+        "bucket_id": 224,
+        "date": "2025-06-01",
+        "day_percentage": 0.00313925,
+        "property_name": "ArrayFromasync"
+    },
+    {
+        "bucket_id": 37,
+        "date": "2025-06-01",
+        "day_percentage": 0.00298129,
+        "property_name": "FontVariantAlternates"
+    },
+    {
+        "bucket_id": 304,
+        "date": "2025-06-01",
+        "day_percentage": 0.00286566,
+        "property_name": "AppShareTargets"
+    },
+    {
+        "bucket_id": 171,
+        "date": "2025-06-01",
+        "day_percentage": 0.00283448,
+        "property_name": "Lab"
+    },
+    {
+        "bucket_id": 98,
+        "date": "2025-06-01",
+        "day_percentage": 0.00282476,
+        "property_name": "ImageSet"
+    },
+    {
+        "bucket_id": 121,
+        "date": "2025-06-01",
+        "day_percentage": 0.00282146,
+        "property_name": "AsyncClipboard"
+    },
+    {
+        "bucket_id": 264,
+        "date": "2025-06-01",
+        "day_percentage": 0.00281294,
+        "property_name": "VirtualKeyboard"
+    },
+    {
+        "bucket_id": 179,
+        "date": "2025-06-01",
+        "day_percentage": 0.00276372,
+        "property_name": "FontVariantPosition"
+    },
+    {
+        "bucket_id": 90,
+        "date": "2025-06-01",
+        "day_percentage": 0.00272776,
+        "property_name": "Mathml"
+    },
+    {
+        "bucket_id": 204,
+        "date": "2025-06-01",
+        "day_percentage": 0.00255171,
+        "property_name": "Canvas2dDesynchronized"
+    },
+    {
+        "bucket_id": 204,
+        "date": "2025-06-01",
+        "day_percentage": 0.00255171,
+        "property_name": "Canvas2dDesynchronized"
+    },
+    {
+        "bucket_id": 176,
+        "date": "2025-06-01",
+        "day_percentage": 0.00246606,
+        "property_name": "RoundModRem"
+    },
+    {
+        "bucket_id": 180,
+        "date": "2025-06-01",
+        "day_percentage": 0.00245466,
+        "property_name": "TextEmphasis"
+    },
+    {
+        "bucket_id": 167,
+        "date": "2025-06-01",
+        "day_percentage": 0.00236314,
+        "property_name": "ImageOrientation"
+    },
+    {
+        "bucket_id": 20,
+        "date": "2025-06-01",
+        "day_percentage": 0.00234064,
+        "property_name": "ContainerStyleQueries"
+    },
+    {
+        "bucket_id": 209,
+        "date": "2025-06-01",
+        "day_percentage": 0.00229909,
+        "property_name": "RubyPosition"
+    },
+    {
+        "bucket_id": 300,
+        "date": "2025-06-01",
+        "day_percentage": 0.00227011,
+        "property_name": "AppProtocolHandlers"
+    },
+    {
+        "bucket_id": 211,
+        "date": "2025-06-01",
+        "day_percentage": 0.00222849,
+        "property_name": "HyphenateCharacter"
+    },
+    {
+        "bucket_id": 255,
+        "date": "2025-06-01",
+        "day_percentage": 0.00215775,
+        "property_name": "RemotePlayback"
+    },
+    {
+        "bucket_id": 190,
+        "date": "2025-06-01",
+        "day_percentage": 0.00215251,
+        "property_name": "Overflow"
+    },
+    {
+        "bucket_id": 97,
+        "date": "2025-06-01",
+        "day_percentage": 0.00196413,
+        "property_name": "AnchorPositioning"
+    },
+    {
+        "bucket_id": 183,
+        "date": "2025-06-01",
+        "day_percentage": 0.00195131,
+        "property_name": "CalcConstants"
+    },
+    {
+        "bucket_id": 172,
+        "date": "2025-06-01",
+        "day_percentage": 0.00191411,
+        "property_name": "Hwb"
+    },
+    {
+        "bucket_id": 120,
+        "date": "2025-06-01",
+        "day_percentage": 0.00189726,
+        "property_name": "Search"
+    },
+    {
+        "bucket_id": 208,
+        "date": "2025-06-01",
+        "day_percentage": 0.0018892,
+        "property_name": "RubyAlign"
+    },
+    {
+        "bucket_id": 329,
+        "date": "2025-06-01",
+        "day_percentage": 0.001805,
+        "property_name": "State"
+    },
+    {
+        "bucket_id": 177,
+        "date": "2025-06-01",
+        "day_percentage": 0.00180121,
+        "property_name": "TrigFunctions"
+    },
+    {
+        "bucket_id": 4,
+        "date": "2025-06-01",
+        "day_percentage": 0.0017372,
+        "property_name": "Subgrid"
+    },
+    {
+        "bucket_id": 147,
+        "date": "2025-06-01",
+        "day_percentage": 0.00156093,
+        "property_name": "Accelerometer"
+    },
+    {
+        "bucket_id": 270,
+        "date": "2025-06-01",
+        "day_percentage": 0.00155952,
+        "property_name": "IsError"
+    },
+    {
+        "bucket_id": 270,
+        "date": "2025-06-01",
+        "day_percentage": 0.00155952,
+        "property_name": "IsError"
+    },
+    {
+        "bucket_id": 50,
+        "date": "2025-06-01",
+        "day_percentage": 0.00153116,
+        "property_name": "OriginPrivateFileSystem"
+    },
+    {
+        "bucket_id": 286,
+        "date": "2025-06-01",
+        "day_percentage": 0.00149721,
+        "property_name": "Gethtml"
+    },
+    {
+        "bucket_id": 2,
+        "date": "2025-06-01",
+        "day_percentage": 0.00139108,
+        "property_name": "ViewTransitions"
+    },
+    {
+        "bucket_id": 86,
+        "date": "2025-06-01",
+        "day_percentage": 0.00133091,
+        "property_name": "HiddenUntilFound"
+    },
+    {
+        "bucket_id": 280,
+        "date": "2025-06-01",
+        "day_percentage": 0.00124728,
+        "property_name": "ContainerScrollStateQueries"
+    },
+    {
+        "bucket_id": 192,
+        "date": "2025-06-01",
+        "day_percentage": 0.00117691,
+        "property_name": "SpellingGrammarError"
+    },
+    {
+        "bucket_id": 262,
+        "date": "2025-06-01",
+        "day_percentage": 0.00111788,
+        "property_name": "Writingsuggestions"
+    },
+    {
+        "bucket_id": 267,
+        "date": "2025-06-01",
+        "day_percentage": 0.00110112,
+        "property_name": "WindowControlsOverlay"
+    },
+    {
+        "bucket_id": 117,
+        "date": "2025-06-01",
+        "day_percentage": 0.00105,
+        "property_name": "OBSOLETE_HiddenUntilFoundAttribute"
+    },
+    {
+        "bucket_id": 60,
+        "date": "2025-06-01",
+        "day_percentage": 0.00103999,
+        "property_name": "ScrollToTextFragment"
+    },
+    {
+        "bucket_id": 54,
+        "date": "2025-06-01",
+        "day_percentage": 0.00100826,
+        "property_name": "Scope"
+    },
+    {
+        "bucket_id": 135,
+        "date": "2025-06-01",
+        "day_percentage": 0.000976,
+        "property_name": "OBSOLETE_CanvasElement"
+    },
+    {
+        "bucket_id": 273,
+        "date": "2025-06-01",
+        "day_percentage": 0.00094538,
+        "property_name": "ClipboardSupports"
+    },
+    {
+        "bucket_id": 301,
+        "date": "2025-06-01",
+        "day_percentage": 0.00094241,
+        "property_name": "Badging"
+    },
+    {
+        "bucket_id": 234,
+        "date": "2025-06-01",
+        "day_percentage": 0.00094128,
+        "property_name": "CalcSize"
+    },
+    {
+        "bucket_id": 24,
+        "date": "2025-06-01",
+        "day_percentage": 0.00091299,
+        "property_name": "DeclarativeShadowDom"
+    },
+    {
+        "bucket_id": 139,
+        "date": "2025-06-01",
+        "day_percentage": 0.0009,
+        "property_name": "OBSOLETE_CanvasAlpha"
+    },
+    {
+        "bucket_id": 152,
+        "date": "2025-06-01",
+        "day_percentage": 0.00089337,
+        "property_name": "AudioWorklet"
+    },
+    {
+        "bucket_id": 138,
+        "date": "2025-06-01",
+        "day_percentage": 0.000866,
+        "property_name": "OBSOLETE_Canvas2D"
+    },
+    {
+        "bucket_id": 324,
+        "date": "2025-06-01",
+        "day_percentage": 0.000859,
+        "property_name": "RequestAnimationFrameWorkers"
+    },
+    {
+        "bucket_id": 12,
+        "date": "2025-06-01",
+        "day_percentage": 0.00081178,
+        "property_name": "BlockingRender"
+    },
+    {
+        "bucket_id": 210,
+        "date": "2025-06-01",
+        "day_percentage": 0.00077492,
+        "property_name": "InitialLetter"
+    },
+    {
+        "bucket_id": 89,
+        "date": "2025-06-01",
+        "day_percentage": 0.00076373,
+        "property_name": "Navigation"
+    },
+    {
+        "bucket_id": 66,
+        "date": "2025-06-01",
+        "day_percentage": 0.00075849,
+        "property_name": "StorageBuckets"
+    },
+    {
+        "bucket_id": 136,
+        "date": "2025-06-01",
+        "day_percentage": 0.000725,
+        "property_name": "OBSOLETE_CanvasFillText"
+    },
+    {
+        "bucket_id": 75,
+        "date": "2025-06-01",
+        "day_percentage": 0.00071474,
+        "property_name": "UserPseudos"
+    },
+    {
+        "bucket_id": 212,
+        "date": "2025-06-01",
+        "day_percentage": 0.00069026,
+        "property_name": "HyphenateLimitChars"
+    },
+    {
+        "bucket_id": 132,
+        "date": "2025-06-01",
+        "day_percentage": 0.00067643,
+        "property_name": "ContainInlineSize"
+    },
+    {
+        "bucket_id": 35,
+        "date": "2025-06-01",
+        "day_percentage": 0.0005878,
+        "property_name": "FontSynthesisWeight"
+    },
+    {
+        "bucket_id": 311,
+        "date": "2025-06-01",
+        "day_percentage": 0.000537,
+        "property_name": "If"
+    },
+    {
+        "bucket_id": 311,
+        "date": "2025-06-01",
+        "day_percentage": 0.000537,
+        "property_name": "If"
+    },
+    {
+        "bucket_id": 76,
+        "date": "2025-06-01",
+        "day_percentage": 0.00048978,
+        "property_name": "Webcodecs"
+    },
+    {
+        "bucket_id": 245,
+        "date": "2025-06-01",
+        "day_percentage": 0.00047973,
+        "property_name": "ViewTransitionClass"
+    },
+    {
+        "bucket_id": 34,
+        "date": "2025-06-01",
+        "day_percentage": 0.0004672,
+        "property_name": "FontSynthesisStyle"
+    },
+    {
+        "bucket_id": 285,
+        "date": "2025-06-01",
+        "day_percentage": 0.00042954,
+        "property_name": "FontVariantEmoji"
+    },
+    {
+        "bucket_id": 215,
+        "date": "2025-06-01",
+        "day_percentage": 0.00041612,
+        "property_name": "ClipPathBoxes"
+    },
+    {
+        "bucket_id": 278,
+        "date": "2025-06-01",
+        "day_percentage": 0.00041064,
+        "property_name": "Profiler"
+    },
+    {
+        "bucket_id": 114,
+        "date": "2025-06-01",
+        "day_percentage": 0.00040927,
+        "property_name": "DetailsName"
+    },
+    {
+        "bucket_id": 63,
+        "date": "2025-06-01",
+        "day_percentage": 0.00040652,
+        "property_name": "SpeechRecognition"
+    },
+    {
+        "bucket_id": 32,
+        "date": "2025-06-01",
+        "day_percentage": 0.0004039,
+        "property_name": "FontPalette"
+    },
+    {
+        "bucket_id": 93,
+        "date": "2025-06-01",
+        "day_percentage": 0.00040264,
+        "property_name": "CanvasRoundrect"
+    },
+    {
+        "bucket_id": 182,
+        "date": "2025-06-01",
+        "day_percentage": 0.00038175,
+        "property_name": "TextWrapStyle"
+    },
+    {
+        "bucket_id": 196,
+        "date": "2025-06-01",
+        "day_percentage": 0.00035673,
+        "property_name": "WordBreakAutoPhrase"
+    },
+    {
+        "bucket_id": 64,
+        "date": "2025-06-01",
+        "day_percentage": 0.0003417,
+        "property_name": "SpeechSynthesis"
+    },
+    {
+        "bucket_id": 17,
+        "date": "2025-06-01",
+        "day_percentage": 0.00033348,
+        "property_name": "ComputePressure"
+    },
+    {
+        "bucket_id": 134,
+        "date": "2025-06-01",
+        "day_percentage": 0.00032932,
+        "property_name": "Overlay"
+    },
+    {
+        "bucket_id": 339,
+        "date": "2025-06-01",
+        "day_percentage": 0.00031,
+        "property_name": "ClearSiteData"
+    },
+    {
+        "bucket_id": 67,
+        "date": "2025-06-01",
+        "day_percentage": 0.00030115,
+        "property_name": "TargetText"
+    },
+    {
+        "bucket_id": 156,
+        "date": "2025-06-01",
+        "day_percentage": 0.00027359,
+        "property_name": "ObjectViewBox"
+    },
+    {
+        "bucket_id": 248,
+        "date": "2025-06-01",
+        "day_percentage": 0.00025462,
+        "property_name": "WebOtp"
+    },
+    {
+        "bucket_id": 279,
+        "date": "2025-06-01",
+        "day_percentage": 0.00024815,
+        "property_name": "AsyncIterableStreams"
+    },
+    {
+        "bucket_id": 249,
+        "date": "2025-06-01",
+        "day_percentage": 0.00022891,
+        "property_name": "PreservesPitch"
+    },
+    {
+        "bucket_id": 319,
+        "date": "2025-06-01",
+        "day_percentage": 0.000225,
+        "property_name": "ScrollInitialTarget"
+    },
+    {
+        "bucket_id": 214,
+        "date": "2025-06-01",
+        "day_percentage": 0.00022411,
+        "property_name": "BaselineSource"
+    },
+    {
+        "bucket_id": 313,
+        "date": "2025-06-01",
+        "day_percentage": 0.000223,
+        "property_name": "ReadingFlow"
+    },
+    {
+        "bucket_id": 295,
+        "date": "2025-06-01",
+        "day_percentage": 0.00021554,
+        "property_name": "ScrollMarkers"
+    },
+    {
+        "bucket_id": 41,
+        "date": "2025-06-01",
+        "day_percentage": 0.00021542,
+        "property_name": "IdleDetection"
+    },
+    {
+        "bucket_id": 228,
+        "date": "2025-06-01",
+        "day_percentage": 0.00018761,
+        "property_name": "ScrollSnapEvents"
+    },
+    {
+        "bucket_id": 325,
+        "date": "2025-06-01",
+        "day_percentage": 0.000177,
+        "property_name": "IframeCredentialless"
+    },
+    {
+        "bucket_id": 263,
+        "date": "2025-06-01",
+        "day_percentage": 0.00016555,
+        "property_name": "Ink"
+    },
+    {
+        "bucket_id": 293,
+        "date": "2025-06-01",
+        "day_percentage": 0.00014779,
+        "property_name": "Interactivity"
+    },
+    {
+        "bucket_id": 33,
+        "date": "2025-06-01",
+        "day_percentage": 0.00013869,
+        "property_name": "FontSynthesisSmallCaps"
+    },
+    {
+        "bucket_id": 52,
+        "date": "2025-06-01",
+        "day_percentage": 0.0001372,
+        "property_name": "PointerLock"
+    },
+    {
+        "bucket_id": 15,
+        "date": "2025-06-01",
+        "day_percentage": 0.00013396,
+        "property_name": "CanvasContextLost"
+    },
+    {
+        "bucket_id": 51,
+        "date": "2025-06-01",
+        "day_percentage": 0.00013379,
+        "property_name": "PictureInPicture"
+    },
+    {
+        "bucket_id": 256,
+        "date": "2025-06-01",
+        "day_percentage": 0.00013011,
+        "property_name": "VerticalFormControls"
+    },
+    {
+        "bucket_id": 137,
+        "date": "2025-06-01",
+        "day_percentage": 0.000113,
+        "property_name": "OBSOLETE_CanvasMeasureText"
+    },
+    {
+        "bucket_id": 265,
+        "date": "2025-06-01",
+        "day_percentage": 0.00011015,
+        "property_name": "NonCookieStorageAccess"
+    },
+    {
+        "bucket_id": 184,
+        "date": "2025-06-01",
+        "day_percentage": 0.0001093,
+        "property_name": "ExpFunctions"
+    },
+    {
+        "bucket_id": 203,
+        "date": "2025-06-01",
+        "day_percentage": 0.00010897,
+        "property_name": "Canvas2dColorManagement"
+    },
+    {
+        "bucket_id": 203,
+        "date": "2025-06-01",
+        "day_percentage": 0.00010897,
+        "property_name": "Canvas2dColorManagement"
+    },
+    {
+        "bucket_id": 26,
+        "date": "2025-06-01",
+        "day_percentage": 9.64e-05,
+        "property_name": "DocumentPictureInPicture"
+    },
+    {
+        "bucket_id": 92,
+        "date": "2025-06-01",
+        "day_percentage": 8.35e-05,
+        "property_name": "CanvasReset"
+    },
+    {
+        "bucket_id": 242,
+        "date": "2025-06-01",
+        "day_percentage": 8.19e-05,
+        "property_name": "AtomicsWaitAsync"
+    },
+    {
+        "bucket_id": 266,
+        "date": "2025-06-01",
+        "day_percentage": 6.872e-05,
+        "property_name": "IntlDurationFormat"
+    },
+    {
+        "bucket_id": 269,
+        "date": "2025-06-01",
+        "day_percentage": 6.771e-05,
+        "property_name": "Highlight"
+    },
+    {
+        "bucket_id": 119,
+        "date": "2025-06-01",
+        "day_percentage": 6.666e-05,
+        "property_name": "KeyboardLock"
+    },
+    {
+        "bucket_id": 246,
+        "date": "2025-06-01",
+        "day_percentage": 6.475e-05,
+        "property_name": "DRAFT_ReferenceTarget"
+    },
+    {
+        "bucket_id": 340,
+        "date": "2025-06-01",
+        "day_percentage": 5.8e-05,
+        "property_name": "LinkRelExpect"
+    },
+    {
+        "bucket_id": 122,
+        "date": "2025-06-01",
+        "day_percentage": 5.791e-05,
+        "property_name": "ParseHtmlUnsafe"
+    },
+    {
+        "bucket_id": 308,
+        "date": "2025-06-01",
+        "day_percentage": 5.047e-05,
+        "property_name": "DRAFT_ExplicitResourceManagement"
+    },
+    {
+        "bucket_id": 157,
+        "date": "2025-06-01",
+        "day_percentage": 5.029e-05,
+        "property_name": "Cap"
+    },
+    {
+        "bucket_id": 332,
+        "date": "2025-06-01",
+        "day_percentage": 4.9e-05,
+        "property_name": "WindowManagement"
+    },
+    {
+        "bucket_id": 155,
+        "date": "2025-06-01",
+        "day_percentage": 4.814e-05,
+        "property_name": "ContextFillStroke"
+    },
+    {
+        "bucket_id": 258,
+        "date": "2025-06-01",
+        "day_percentage": 4.588e-05,
+        "property_name": "FileSystemAccess"
+    },
+    {
+        "bucket_id": 294,
+        "date": "2025-06-01",
+        "day_percentage": 2.495e-05,
+        "property_name": "ScrollButtons"
+    },
+    {
+        "bucket_id": 288,
+        "date": "2025-06-01",
+        "day_percentage": 2.44e-05,
+        "property_name": "MeasureMemory"
+    },
+    {
+        "bucket_id": 130,
+        "date": "2025-06-01",
+        "day_percentage": 2.391e-05,
+        "property_name": "Eyedropper"
+    },
+    {
+        "bucket_id": 259,
+        "date": "2025-06-01",
+        "day_percentage": 2.277e-05,
+        "property_name": "Closewatcher"
+    },
+    {
+        "bucket_id": 91,
+        "date": "2025-06-01",
+        "day_percentage": 2.144e-05,
+        "property_name": "CanvasCreateconicgradient"
+    },
+    {
+        "bucket_id": 123,
+        "date": "2025-06-01",
+        "day_percentage": 1.711e-05,
+        "property_name": "ClipboardUnsanitizedFormats"
+    },
+    {
+        "bucket_id": 103,
+        "date": "2025-06-01",
+        "day_percentage": 1.507e-05,
+        "property_name": "Gamepad"
+    },
+    {
+        "bucket_id": 103,
+        "date": "2025-06-01",
+        "day_percentage": 1.507e-05,
+        "property_name": "Gamepad"
+    },
+    {
+        "bucket_id": 142,
+        "date": "2025-06-01",
+        "day_percentage": 1.5e-05,
+        "property_name": "OBSOLETE_WillReadFrequently"
+    },
+    {
+        "bucket_id": 106,
+        "date": "2025-06-01",
+        "day_percentage": 1.337e-05,
+        "property_name": "WebNfc"
+    },
+    {
+        "bucket_id": 296,
+        "date": "2025-06-01",
+        "day_percentage": 1.018e-05,
+        "property_name": "PopoverHint"
+    },
+    {
+        "bucket_id": 296,
+        "date": "2025-06-01",
+        "day_percentage": 1.018e-05,
+        "property_name": "PopoverHint"
+    },
+    {
+        "bucket_id": 61,
+        "date": "2025-06-01",
+        "day_percentage": 1.002e-05,
+        "property_name": "ShowPickerInput"
+    },
+    {
+        "bucket_id": 153,
+        "date": "2025-06-01",
+        "day_percentage": 9.68e-06,
+        "property_name": "WebMidi"
+    },
+    {
+        "bucket_id": 271,
+        "date": "2025-06-01",
+        "day_percentage": 7.36e-06,
+        "property_name": "ClipboardCustomFormat"
+    },
+    {
+        "bucket_id": 334,
+        "date": "2025-06-01",
+        "day_percentage": 7e-06,
+        "property_name": "Uint8arrayBase64Hex"
+    },
+    {
+        "bucket_id": 334,
+        "date": "2025-06-01",
+        "day_percentage": 7e-06,
+        "property_name": "Uint8arrayBase64Hex"
+    },
+    {
+        "bucket_id": 334,
+        "date": "2025-06-01",
+        "day_percentage": 7e-06,
+        "property_name": "Uint8arrayBase64Hex"
+    },
+    {
+        "bucket_id": 162,
+        "date": "2025-06-01",
+        "day_percentage": 6.58e-06,
+        "property_name": "Rlh"
+    },
+    {
+        "bucket_id": 81,
+        "date": "2025-06-01",
+        "day_percentage": 6.47e-06,
+        "property_name": "Webusb"
+    },
+    {
+        "bucket_id": 314,
+        "date": "2025-06-01",
+        "day_percentage": 6e-06,
+        "property_name": "ComposedRanges"
+    },
+    {
+        "bucket_id": 77,
+        "date": "2025-06-01",
+        "day_percentage": 5.65e-06,
+        "property_name": "Webhid"
+    },
+    {
+        "bucket_id": 229,
+        "date": "2025-06-01",
+        "day_percentage": 5.1e-06,
+        "property_name": "MoveBeforeAPI"
+    },
+    {
+        "bucket_id": 229,
+        "date": "2025-06-01",
+        "day_percentage": 5.1e-06,
+        "property_name": "MoveBeforeAPI"
+    },
+    {
+        "bucket_id": 287,
+        "date": "2025-06-01",
+        "day_percentage": 4.94e-06,
+        "property_name": "LocalFonts"
+    },
+    {
+        "bucket_id": 107,
+        "date": "2025-06-01",
+        "day_percentage": 4.25e-06,
+        "property_name": "Serial"
+    },
+    {
+        "bucket_id": 107,
+        "date": "2025-06-01",
+        "day_percentage": 4.25e-06,
+        "property_name": "Serial"
+    },
+    {
+        "bucket_id": 322,
+        "date": "2025-06-01",
+        "day_percentage": 4e-06,
+        "property_name": "RegionCapture"
+    },
+    {
+        "bucket_id": 80,
+        "date": "2025-06-01",
+        "day_percentage": 2.95e-06,
+        "property_name": "Webtransport"
+    },
+    {
+        "bucket_id": 141,
+        "date": "2025-06-01",
+        "day_percentage": 2e-06,
+        "property_name": "OBSOLETE_CanvasDesynchronized"
+    },
+    {
+        "bucket_id": 342,
+        "date": "2025-06-01",
+        "day_percentage": 2e-06,
+        "property_name": "CustomizableSelect"
+    },
+    {
+        "bucket_id": 159,
+        "date": "2025-06-01",
+        "day_percentage": 1.91e-06,
+        "property_name": "Ic"
+    },
+    {
+        "bucket_id": 158,
+        "date": "2025-06-01",
+        "day_percentage": 1.24e-06,
+        "property_name": "Rcap"
+    },
+    {
+        "bucket_id": 105,
+        "date": "2025-06-01",
+        "day_percentage": 1.01e-06,
+        "property_name": "WebBluetooth"
+    },
+    {
+        "bucket_id": 327,
+        "date": "2025-06-01",
+        "day_percentage": 1e-06,
+        "property_name": "WebauthnPublicKeyEasy"
+    },
+    {
+        "bucket_id": 272,
+        "date": "2025-06-01",
+        "day_percentage": 9.9e-07,
+        "property_name": "ClipboardSvg"
+    },
+    {
+        "bucket_id": 221,
+        "date": "2025-06-01",
+        "day_percentage": 9.1e-07,
+        "property_name": "ResizableBuffers"
+    },
+    {
+        "bucket_id": 241,
+        "date": "2025-06-01",
+        "day_percentage": 7.8e-07,
+        "property_name": "TransferableArraybuffer"
+    },
+    {
+        "bucket_id": 127,
+        "date": "2025-06-01",
+        "day_percentage": 6.5e-07,
+        "property_name": "ShowPickerSelect"
+    },
+    {
+        "bucket_id": 207,
+        "date": "2025-06-01",
+        "day_percentage": 6e-07,
+        "property_name": "Rch"
+    },
+    {
+        "bucket_id": 299,
+        "date": "2025-06-01",
+        "day_percentage": 5.4e-07,
+        "property_name": "AppFileHandlers"
+    },
+    {
+        "bucket_id": 100,
+        "date": "2025-06-01",
+        "day_percentage": 5.2e-07,
+        "property_name": "SlotAssign"
+    },
+    {
+        "bucket_id": 23,
+        "date": "2025-06-01",
+        "day_percentage": 3.2e-07,
+        "property_name": "CssModules"
+    },
+    {
+        "bucket_id": 312,
+        "date": "2025-06-01",
+        "day_percentage": 1e-07,
+        "property_name": "WebAppManifestUpdateToken"
+    },
+    {
+        "bucket_id": 217,
+        "date": "2025-06-01",
+        "day_percentage": 2e-08,
+        "property_name": "ActiveViewTransition"
+    },
+    {
+        "bucket_id": 160,
+        "date": "2025-06-01",
+        "day_percentage": 1e-08,
+        "property_name": "Ric"
+    },
+    {
+        "bucket_id": 140,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "OBSOLETE_CanvasColorManagement"
+    },
+    {
+        "bucket_id": 243,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "OBSOLETE_LocaleInfoObsoletedGetters"
+    },
+    {
+        "bucket_id": 281,
+        "date": "2025-05-26",
+        "day_percentage": 0.0,
+        "property_name": "DRAFT_ScopedViewTransitions"
+    },
+    {
+        "bucket_id": 292,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "ColumnPseudo"
+    },
+    {
+        "bucket_id": 307,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "DRAFT_WasmBranchHinting"
+    },
+    {
+        "bucket_id": 310,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "Function"
+    },
+    {
+        "bucket_id": 310,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "Function"
+    },
+    {
+        "bucket_id": 321,
+        "date": "2025-06-01",
+        "day_percentage": 0.0,
+        "property_name": "ElementCapture"
+    },
+    {
+        "bucket_id": 193,
+        "date": "2025-02-05",
+        "day_percentage": 0.0,
+        "property_name": "TextDecorationSelection"
+    }
+]
