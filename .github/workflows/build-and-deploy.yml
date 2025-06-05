@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - exp
   pull_request:
     types:
       - opened
@@ -11,7 +11,7 @@ on:
       - labeled
   schedule:
     # Re-deploy weekly to automatically track changes
-    - cron: '5 8 * * 6'
+    # - cron: '5 8 * * 6'
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,6 +22,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - name: Remove label from PR
         if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
         env:
@@ -40,7 +43,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             :hourglass_flowing_sand: Running build preview for PR.
-            
+
             <!-- workflow-preview-build-label -->
 
       - name: Download CSS properties JSON From W3
@@ -50,7 +53,6 @@ jobs:
       - name: Download Servo supported CSS properties
         run: |
           wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
-
 
       # Need another way of retrieving default Servo preference
       # - name: Download Servo default prefs.json
@@ -127,44 +129,54 @@ jobs:
         with:
           name: ${{ env.RESULT_FILENAME }}
           path: ${{ github.workspace }}/collector/download/${{ env.RESULT_FILENAME }}
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12' 
-          
-      - name: Build CSS Page
+      - name: Generate Popularity Ranked Result
         run: |
-          python ./python/build_css.py
-
-      - name: Build MDN BCD Page
-        run: |
-          git clone https://github.com/mdn/browser-compat-data.git
-          python ./python/build_browser_feature.py ${{ github.workspace }}/collector/download/${{ env.RESULT_FILENAME }}
-
-      - name: Build Test
-        if: github.ref != 'refs/heads/main' && !contains(github.event.pull_request.labels.*.name, 'preview-build')
-        uses: shalzz/zola-deploy-action@v0.20.0
-        env:
-          BUILD_ONLY: true
-          BUILD_FLAGS: --drafts
-      - name: Preview Pull Request
-        if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
-        uses: shalzz/zola-deploy-action@v0.20.0
-        env:
-          PAGES_BRANCH: pr-preview
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Update comment with completion status
-        if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
-        uses: peter-evans/create-or-update-comment@v4
+          pnpm install
+          pnpm build
+          pnpm tag ${{ github.workspace }}/collector/download/${{ env.RESULT_FILENAME }}
+          pnpm to-md
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
         with:
-          comment-id: ${{ steps.comment.outputs.comment-id }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            :white_check_mark: PR preview build completed at https://github.com/dklassic/AreWeBrowserYet/tree/pr-preview.
-      - name: Build and deploy
-        if: github.ref == 'refs/heads/main'
-        uses: shalzz/zola-deploy-action@v0.20.0
-        env:
-          PAGES_BRANCH: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: popularity-ranked-results
+          path: ${{ github.workspace }}/popularityBcdMap.*
+      # - uses: actions/setup-python@v5
+      #   with:
+      #     python-version: "3.12"
+
+      # - name: Build CSS Page
+      #   run: |
+      #     python ./python/build_css.py
+
+      # - name: Build MDN BCD Page
+      #   run: |
+      #     git clone https://github.com/mdn/browser-compat-data.git
+      #     python ./python/build_browser_feature.py ${{ github.workspace }}/collector/download/${{ env.RESULT_FILENAME }}
+
+      # - name: Build Test
+      #   if: github.ref != 'refs/heads/main' && !contains(github.event.pull_request.labels.*.name, 'preview-build')
+      #   uses: shalzz/zola-deploy-action@v0.20.0
+      #   env:
+      #     BUILD_ONLY: true
+      #     BUILD_FLAGS: --drafts
+      # - name: Preview Pull Request
+      #   if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
+      #   uses: shalzz/zola-deploy-action@v0.20.0
+      #   env:
+      #     PAGES_BRANCH: pr-preview
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Update comment with completion status
+      #   if: github.ref != 'refs/heads/main' && contains(github.event.pull_request.labels.*.name, 'preview-build')
+      #   uses: peter-evans/create-or-update-comment@v4
+      #   with:
+      #     comment-id: ${{ steps.comment.outputs.comment-id }}
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     issue-number: ${{ github.event.pull_request.number }}
+      #     body: |
+      #       :white_check_mark: PR preview build completed at https://github.com/dklassic/AreWeBrowserYet/tree/pr-preview.
+      # - name: Build and deploy
+      #   if: github.ref == 'refs/heads/main'
+      #   uses: shalzz/zola-deploy-action@v0.20.0
+      #   env:
+      #     PAGES_BRANCH: gh-pages
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
