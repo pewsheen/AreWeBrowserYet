@@ -46,27 +46,6 @@ jobs:
 
             <!-- workflow-preview-build-label -->
 
-      - name: Download CSS properties JSON From W3
-        run: |
-          wget https://www.w3.org/Style/CSS/all-properties.en.json -O ./static/w3-all-properties.json
-
-      - name: Download Servo supported CSS properties
-        run: |
-          wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
-
-      # Need another way of retrieving default Servo preference
-      # - name: Download Servo default prefs.json
-      #   run: |
-      #     wget https://raw.githubusercontent.com/servo/servo/refs/heads/main/resources/prefs.json -O ./static/servo-default-pref.json
-
-      - name: Download Google supported CSS properties
-        run: |
-          wget https://chromestatus.com/data/csspopularity -O ./static/google-css-popularity.json
-
-      # Prepare MDN BCD collector
-      - name: Clone Repository
-        uses: actions/checkout@v4
-
       - name: Clone mdn-bcd-collector
         uses: actions/checkout@v4
         with:
@@ -78,10 +57,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
 
       - name: Install Servo binary required libraries
         run: |
@@ -147,6 +122,27 @@ jobs:
         with:
           name: popularity-ranked-results
           path: ${{ github.workspace }}/popularityBcdMap.json
+
+      - name: Download CSS properties JSON From W3
+        run: |
+          wget https://www.w3.org/Style/CSS/all-properties.en.json -O ./static/w3-all-properties.json
+
+      - name: Download Servo supported CSS properties
+        run: |
+          wget https://doc.servo.org/stylo/css-properties.json -O ./static/servo-css-properties.json
+
+      # Need another way of retrieving default Servo preference
+      # - name: Download Servo default prefs.json
+      #   run: |
+      #     wget https://raw.githubusercontent.com/servo/servo/refs/heads/main/resources/prefs.json -O ./static/servo-default-pref.json
+
+      - name: Download Google supported CSS properties
+        run: |
+          wget https://chromestatus.com/data/csspopularity -O ./static/google-css-popularity.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
       - name: Build CSS Page
         run: |
